@@ -15,6 +15,6 @@ i=1
 while i <= int(cmtcount):
      bot.media_comment(POSTID, commentmsg)
      print(colored(f"{username} Sended {i} Comment", 'green'))
-     time.sleep(3)
+     time.sleep(10)
      i+=1
 print(colored(f"Successfully Sended {cmtcount} Comments", 'green'))
