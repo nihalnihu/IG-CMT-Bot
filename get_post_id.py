@@ -1,5 +1,6 @@
 from instagrapi import Client
 from termcolor import colored
+
 getbot = Client()
 username = input("Enter Username: ")
 password = input("Enter Password: ")
