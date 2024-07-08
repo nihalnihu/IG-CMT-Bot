@@ -1,7 +1,11 @@
 # IG-CommentBot
 
-$ pkg update && pkg upgrade
+$ '''
+pkg update && pkg upgrade
+'''
+
 $ pkg install git
+
 $ pip install -r requirements.txt
 
 For Get Post ID 
