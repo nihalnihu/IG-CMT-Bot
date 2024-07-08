@@ -24,11 +24,14 @@ commentmsg = input(colored("Enter Comment Message: ", 'yellow'))
 #Enter How Meny Comments You Want To Send (int)
 cmtcount = input("How Meny Comment To Send: ")
 
+#Set A time to Deley in Seconds
+deley = input("How Meny Times you want to set delay? (in seconds): ")
+
 #loop Started
 i=1
 while i <= int(cmtcount):
      bot.media_comment(POSTID, commentmsg)
      print(colored(f"{username} Sended {i} Comment", 'green'))
-     time.sleep(10)
+     time.sleep(deley)
      i+=1
 print(colored(f"Successfully Sended {cmtcount} Comments", 'green'))
