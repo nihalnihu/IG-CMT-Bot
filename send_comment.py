@@ -10,7 +10,7 @@ print(f"{username} Login Success..")
 
 POSTID = input(colored("Enter Instagram Post ID: ", 'cyan'))
 commentmsg = input(colored("Enter Comment Message: ", 'yellow'))
-cmtcount = input(colored("How Meny Comment To Send: ", 'magenta'))
+cmtcount = input("How Meny Comment To Send: ")
 i=1
 while i <= int(cmtcount):
      bot.media_comment(POSTID, commentmsg)
