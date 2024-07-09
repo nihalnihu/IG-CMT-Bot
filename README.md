@@ -57,5 +57,4 @@ python send_comment.py
 <details>
  <summary>sᴀᴍᴘʟᴇ</summary>
 
- <img src="https://instant-dierdre-fsharebot.koyeb.app/watch/11956/Ig.gif?hash=AgAD4R" alt="Sending Comments">
 </details>
