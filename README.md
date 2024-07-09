@@ -1,8 +1,12 @@
-<p align="center"> <img src="20240709_212053.jpg" alt="hi" width="100" height="100"></p>
+<p align="center"> <img src="https://github.com/nihalnihu/AutoIG-CMT/blob/main/Sample%20Images/h.jpg" alt="hi" width="100" height="100"></p>
 
 <p align="center">
+ＡＵＴＯ</p>
+<p align="center">
 IＮＳＴＡＧＲＡＭ</p>
-
+<p align="center">ＣＯＭＭＥＮＴ</p>
+<p align="center">
+ＢＯＴ</p>
 <details>
 
  <summary>ɪɴsᴛᴀʟʟᴀᴛɪᴏɴ</summary>
