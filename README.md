@@ -53,3 +53,9 @@ python get_post_id.py
 python send_comment.py
 ```
 </details>
+
+<details>
+ <summary>sᴀᴍᴘʟᴇ</summary>
+
+ <img src="https://github.com/nihalnihu/AutoIG-CMT/blob/main/Sample%20Images/h.jpg" alt="Sending Comments">
+</details>
