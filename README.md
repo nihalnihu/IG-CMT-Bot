@@ -1,15 +1,17 @@
-### Insta Auto Unlimited Comment Bot
+<p align="center"> <img src="20240709_212053.jpg" alt="hi" width="100" height="100"></p>
 
+<p align="center">
+IＮＳＴＡＧＲＡＭ</p>
 
-# Installation 
+<details>
 
-#### For Update and upgrade Packeges
+ <summary>ɪɴsᴛᴀʟʟᴀᴛɪᴏɴ</summary>
+
+#### _For Update and upgrade Packeges_
 ```
 pkg update && pkg upgrade
 ```
-
-
-### Install Required Packeges
+### _Install Required Packeges_
 ```
 pkg install git
 ```
@@ -18,31 +20,32 @@ pkg install git
 pkg install unzip
 ```
 
-### Install The Tool in Your Terminal
+### _Install The Tool in Your Terminal_
 ```
 git clone https://github.com/nihalnihu/AutoIG-CMT.git
 ```
 
-### Open Directory 
+### _Open Directory_
 ```
 cd AutoIG-CMT
 ```
 
-### unzip The tool. You Have To Enter Password! Contact Me 9605945309
+### _Unzip The tool. You Have To Enter Password! Contact Me +91 9605945309_
 
 ```
 unzip IG-CMT.zip
 ```
-### After Unzipped. Install Requirements
+### _After Unzipped. Install Requirements__
 ```
 pip install -r requirments.txt
 ```
 
-### Get Instagram Post ID (Must)
+### _Get Instagram Post ID (Must)_
 ```
 python get_post_id.py
 ```
-### Send Auto Unlimited Comments. 😜 
+### _Send Auto Unlimited Comments._ 😜
 ```
 python send_comment.py
 ```
+</details>
