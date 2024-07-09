@@ -3,17 +3,20 @@
 from instagrapi import Client
 import time
 from termcolor import colored
+import getpass
+
 
 bot = Client()
 
+
 #Enter Username and Password 
 username = input(colored("\nEnter Your Instagram Username: ", 'blue' ))
-password = input(colored("Enter You Instagram Password: ", 'blue'))
+password = getpass.getpass(prompt=f"Enter '{username}'s Password: ")
 print("\nTrying... To Login")
 
 #Login
 bot.login(username, password)
-print(f"\n{username} Login Success..")
+print(f"\n{username} Login Success...")
 time.sleep(2)
 
 #Enter Post ID
