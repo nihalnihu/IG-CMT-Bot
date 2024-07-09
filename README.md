@@ -3,7 +3,7 @@
 
 Installation 
 
-For Update Packeges
+For Update and upgrade Packeges
 ```
 pkg update && pkg upgrade
 ```
