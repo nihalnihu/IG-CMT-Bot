@@ -28,7 +28,7 @@ git clone https://github.com/nihalnihu/AutoIG-CMT.git
 cd AutoIG-CMT
 ```
 
-### unzip The tool. You Have To Enter Password! Contact Me [Nihal](wa.me/+919605945309)
+### unzip The tool. You Have To Enter Password! Contact Me 9605945309
 
 ```
 unzip IG-CMT.zip
