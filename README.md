@@ -57,6 +57,9 @@ python send_comment.py
 <details>
  <summary>sᴀᴍᴘʟᴇ</summary>
 
-[](https://github.com/nihalnihu/AutoIG-CMT/assets/70343963/4e7ed7bf-f5a7-4cb5-b893-162fc6cac519)
+# Tool Running...
+https://github.com/nihalnihu/AutoIG-CMT/assets/70343963/3c02db1e-f6cd-447a-b160-d2357e7e7e91
 
+# Sending Comments...
+https://github.com/nihalnihu/AutoIG-CMT/assets/70343963/4e7ed7bf-f5a7-4cb5-b893-162fc6cac519
 </details>
