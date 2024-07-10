@@ -1,4 +1,4 @@
-<p align="center"> <img src="https://github.com/nihalnihu/AutoIG-CMT/blob/main/Sample%20Images/h.jpg" alt="hi" width="100" height="100"></p>
+<p align="center"> <img src="https://github.com/nihalnihu/AutoIG-CMT/assets/72502160/5f6c0b5a-fbf1-4afa-88df-9386751ca607" alt="hi" width="100" height="100"></p>
 
 <p align="center">
 ＡＵＴＯ</p>
