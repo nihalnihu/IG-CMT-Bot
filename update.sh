@@ -1,1 +1,3 @@
+echo Updating...
+
 git pull origin IGBot
