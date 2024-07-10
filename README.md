@@ -57,4 +57,6 @@ python send_comment.py
 <details>
  <summary>sᴀᴍᴘʟᴇ</summary>
 
+[](https://github.com/nihalnihu/AutoIG-CMT/assets/70343963/4e7ed7bf-f5a7-4cb5-b893-162fc6cac519)
+
 </details>
