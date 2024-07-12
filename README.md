@@ -54,7 +54,7 @@ git clone https://github.com/nihalnihu/AutoIG-CMT.git
 cd AutoIG-CMT
 ```
 
-### _Unzip The tool. You Have To Enter Password! Contact Me_
+### _Unzip The tool. You Have To Enter Password! [![Static Badge](https://img.shields.io/badge/Contact_Me-black?style=social&logo=telegram&logoColor=black&logoSize=auto&link=https%3A%2F%2Fgithub.com%2Fnihalnihu%2FIG-CMT-Bot%2Fedit%2FIGBot%2FREADME.md%23message-via-telegram)](https://github.com/nihalnihu/IG-CMT-Bot/edit/IGBot/README.md#message-via-telegram)_
 
 ```
 unzip IG-CMT.zip
@@ -108,7 +108,9 @@ unzip -P <PASSWORD> -o IG-CMT.zip
 <details>
 <summary>Contact Me</summary>
  <br>
- 
+
+### Message Via telegram
+
   [![Nihal](https://img.shields.io/badge/Telegram-blue?style=plastic&logo=telegram&logoSize=auto)](https://t.me/nihh_all)
 
  [![Nihal](https://img.shields.io/badge/Whatsapp-4CBB17?style=plastic&logo=whatsapp&logoSize=auto&logoColor=black)](https://wa.me/919605945309?text=HELLO%20IGBot%20PASS)
