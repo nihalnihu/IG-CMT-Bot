@@ -13,31 +13,23 @@ IＮＳＴＡＧＲＡＭ</p>
 
 <div align="center">
  
-## contact us 
+## contact us
 
 </div>
 
 <p align="center">
-  <a href="http://t.me/nihh_all">
-    <img src="https://img.shields.io/badge/Telegram-blue?style=flat-square&logo=telegram&logoSize=auto" alt="Nihal"/>
-  </a>
+ <a href="http://t.me/nihh_all"><img src="https://img.shields.io/badge/Telegram-blue?style=flat-square&logo=telegram&logoSize=auto" alt="Nihal"/></a>
+<a href="https://wa.me/919605945309text=HELLO%20IGBot"><img src="https://img.shields.io/badge/Whatsapp-4CBB17?style=flat-square&logo=whatsapp&logoSize=auto&logoColor=black" alt="Nihal"></a>
+<a href="https://www.instagram.com/nihh____al"><img src="https://img.shields.io/badge/Instagram-C13584?style=flat-square&logo=instagram&logoColor=black&logoSize=auto" alt="Nihal"></a>
 </p>
 
- <p align="center"> 
-   <a href="https://wa.me/919605945309"
-    text=HELLO%20IGBot"><img src="https://img.shields.io/badge/Whatsapp-4CBB17?style=flat-square&logo=whatsapp&logoSize=auto&logoColor=black" alt="Nihal"></a>
-</p> 
-
-<p align="center"><a href="https://www.instagram.com/nihh____al"><img src="https://img.shields.io/badge/Instagram-C13584?style=flat-square&logo=instagram&logoColor=black&logoSize=auto" alt="Nihal"></a>
-</p>
-
-<details>
-<summary>Tutorial</summary>
  <br>
+
+ <div align="center">
+  
+  ![Tutorial](https://img.shields.io/badge/Tutorial_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white&link=https%3A%2F%2Fwa.me%2F919605945309%3Ftext%3DHELLO%2520IGBot%2520PASS)
+ </div>
  
- ![Tutorial](https://img.shields.io/badge/Tutorial_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white&link=https%3A%2F%2Fwa.me%2F919605945309%3Ftext%3DHELLO%2520IGBot%2520PASS)
- 
-</details>
 <details>
  <summary>ғᴇᴀᴛᴜʀᴇs</summary>
  
