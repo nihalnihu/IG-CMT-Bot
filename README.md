@@ -57,6 +57,27 @@ python send_comment.py
 </details>
 
 <details>
+ <summary>ᴜᴘᴅᴀᴛᴇ</summary>
+ 
+### First Update Packeges Then Update Repo.
+
+```
+pkg update && pkg upgrade
+```
+
+### Open The Tool
+
+```
+cd IG-CMT-Bot
+```
+
+### Update Repo
+```
+bash update.sh
+```
+</details>
+
+<details>
  <summary>sᴀᴍᴘʟᴇ</summary>
 
 # Tool Running...
