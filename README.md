@@ -1,5 +1,4 @@
 
-# Hi Guys 
 <p align="center"> <img src="https://github.com/nihalnihu/AutoIG-CMT/assets/72502160/5f6c0b5a-fbf1-4afa-88df-9386751ca607" alt="hi" width="100" height="100"></p>
 
 <p align="center">
@@ -9,8 +8,24 @@ IＮＳＴＡＧＲＡＭ</p>
 <p align="center">ＣＯＭＭＥＮＴ</p>
 <p align="center">
 ＢＯＴ</p>
-<details>
 
+<details>
+ <summary>ғᴇᴀᴛᴜʀᴇs</summary>
+ 
+ ☞︎ `ʏᴏᴜ ᴄᴀɴ sᴇɴᴅ ᴜɴʟɪᴍɪᴛᴇᴅ ᴄᴏᴍᴍᴇɴᴛs ᴛᴏ ᴀ ᴘᴏsᴛ`
+ 
+ ☞︎ `Also You Can set Costom Comment Message`
+ 
+ ☞︎ `you Can set how many Comments you Want To send.`
+ 
+ <p>
+  
+ ☞︎ `Set Delay Time in seconds:`
+ <br>`(how meny seconds wait After sending one comment)`
+ 
+</p>
+</details>
+<details>
  <summary>ɪɴsᴛᴀʟʟᴀᴛɪᴏɴ</summary>
 
 #### _For Update and upgrade Packeges_
