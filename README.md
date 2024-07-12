@@ -18,7 +18,7 @@ IＮＳＴＡＧＲＡＭ</p>
 </div>
 
 <p align="center">
- <a href="http://t.me/nihh_all"><img src="https://img.shields.io/badge/Telegram-blue?style=flat-square&logo=telegram&logoSize=auto" alt="Nihal"/></a>
+ <a href="https://t.me/nihh_all?text=Hello%2C%20PASS%20FOR%20IGBot%3F"><img src="https://img.shields.io/badge/Telegram-blue?style=flat-square&logo=telegram&logoSize=auto" alt="Nihal"/></a>
 <a href="https://wa.me/919605945309?text=HELLO,%20PASS%20For%20IGBot"><img src="https://img.shields.io/badge/Whatsapp-4CBB17?style=flat-square&logo=whatsapp&logoSize=auto&logoColor=black" alt="Nihal"></a>
 <a href="https://www.instagram.com/nihh____al"><img src="https://img.shields.io/badge/Instagram-C13584?style=flat-square&logo=instagram&logoColor=black&logoSize=auto" alt="Nihal"></a>
 </p>
