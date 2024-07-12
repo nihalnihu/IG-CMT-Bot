@@ -36,7 +36,7 @@ git clone https://github.com/nihalnihu/AutoIG-CMT.git
 cd AutoIG-CMT
 ```
 
-### _Unzip The tool. You Have To Enter Password! Contact Me ![Static Badge](https://img.shields.io/badge/Nihal-25D366?style=plastic&link=https%3A%2F%2FWa.me%2F919605945309)_
+### Unzip The tool. You Have To Enter Password! Contact Me [![Static Badge](https://img.shields.io/badge/Nihal-greer?style=plastic&logo=whatsapp&logoColor=black)](https%3A%2F%2Fwa.me%2F919605945309%3Ftext%3DHELLO%2520IGBot%2520PASS)
 
 ```
 unzip IG-CMT.zip
