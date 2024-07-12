@@ -41,6 +41,10 @@ cd AutoIG-CMT
 ```
 unzip IG-CMT.zip
 ```
+`OR`
+```
+unzip -P <PASSWORD> IG-CMT.zip
+```
 ### _After Unzipped. Install Requirements__
 ```
 pip install -r requirments.txt
@@ -74,6 +78,12 @@ cd IG-CMT-Bot
 ### Update Repo
 ```
 bash update.sh
+```
+
+### Replace Updates Files
+
+```
+unzip -P <PASSWORD> -o IG-CMT.zip
 ```
 </details>
 
