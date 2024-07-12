@@ -12,18 +12,14 @@ IＮＳＴＡＧＲＡＭ</p>
 <details>
  <summary>ғᴇᴀᴛᴜʀᴇs</summary>
  
- ☞︎ `ʏᴏᴜ ᴄᴀɴ sᴇɴᴅ ᴜɴʟɪᴍɪᴛᴇᴅ ᴄᴏᴍᴍᴇɴᴛs ᴛᴏ ᴀ ᴘᴏsᴛ`
+ ☞︎ ‌𝚈𝙾𝚄 𝙲𝙰𝙽 𝚂𝙴𝙽𝙳 𝚄𝙽𝙻𝙸𝙼𝙸𝚃𝙴𝙳 𝙲𝙾𝙼𝙼𝙴𝙽𝚃𝚂 𝚃𝙾 𝙰 𝙿𝙾𝚂𝚃
  
- ☞︎ `Also You Can set Costom Comment Message`
+ ☞︎ 𝙰𝙻𝚂𝙾 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚂𝙴𝚃 𝙲𝚄𝚂𝚃𝙾𝙼 𝙲𝙾𝙼𝙼𝙴𝙽𝚃 𝙼𝙴𝚂𝚂𝙰𝙶𝙴
  
- ☞︎ `you Can set how many Comments you Want To send.`
+ ☞︎ 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚂𝙴𝚃 𝙷𝙾𝚆 𝙼𝙰𝙽𝚈 𝙲𝙾𝙼𝙼𝙴𝙽𝚃𝚂 𝚈𝙾𝚄 𝚆𝙰𝙽𝚃 𝚃𝙾 𝚂𝙴𝙽𝙳.
+   
+ ☞︎ 𝚂𝙴𝚃 𝙳𝙴𝙻𝙰𝚈 𝚃𝙸𝙼𝙴 𝙸𝙽 𝚂𝙴𝙲𝙾𝙽𝙳𝚂 (𝙷𝙾𝚆 𝙼𝙰𝙽𝚈 𝚂𝙴𝙲𝙲𝙾𝙽𝙳𝚂 𝚆𝙰𝙸𝚃 𝙰𝙵𝚃𝙴𝚁 𝚂𝙴𝙽𝙳𝙴𝙳 𝙾𝙽𝙴 𝙲𝙾𝙼𝙼𝙴𝙽𝚃)
  
- <p>
-  
- ☞︎ `Set Delay Time in seconds:`
- <br>`(how meny seconds wait After sending one comment)`
- 
-</p>
 </details>
 <details>
  <summary>ɪɴsᴛᴀʟʟᴀᴛɪᴏɴ</summary>
