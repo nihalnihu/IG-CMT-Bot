@@ -8,11 +8,17 @@ IＮＳＴＡＧＲＡＭ</p>
 <p align="center">ＣＯＭＭＥＮＴ</p>
 <p align="center">
 ＢＯＴ</p>
-
+<details>
+<summary>Tutorial</summary>
+ <br>
+ 
+ ![Static Badge](https://img.shields.io/badge/Tutorial_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white&link=https%3A%2F%2Fwa.me%2F919605945309%3Ftext%3DHELLO%2520IGBot%2520PASS)
+ 
+</details>
 <details>
  <summary>ғᴇᴀᴛᴜʀᴇs</summary>
  
- ☞︎ ‌𝚈𝙾𝚄 𝙲𝙰𝙽 𝚂𝙴𝙽𝙳 𝚄𝙽𝙻𝙸𝙼𝙸𝚃𝙴𝙳 𝙲𝙾𝙼𝙼𝙴𝙽𝚃𝚂 𝚃𝙾 𝙰 𝙿𝙾𝚂𝚃
+ <br> ☞︎ ‌𝚈𝙾𝚄 𝙲𝙰𝙽 𝚂𝙴𝙽𝙳 𝚄𝙽𝙻𝙸𝙼𝙸𝚃𝙴𝙳 𝙲𝙾𝙼𝙼𝙴𝙽𝚃𝚂 𝚃𝙾 𝙰 𝙿𝙾𝚂𝚃
  
  ☞︎ 𝙰𝙻𝚂𝙾 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚂𝙴𝚃 𝙲𝚄𝚂𝚃𝙾𝙼 𝙲𝙾𝙼𝙼𝙴𝙽𝚃 𝙼𝙴𝚂𝚂𝙰𝙶𝙴
  
@@ -47,7 +53,7 @@ git clone https://github.com/nihalnihu/AutoIG-CMT.git
 cd AutoIG-CMT
 ```
 
-### Unzip The tool. You Have To Enter Password! Contact Me [![Static Badge](https://img.shields.io/badge/Nihal-greer?style=plastic&logo=whatsapp&logoColor=black)](https://wa.me/919605945309?text=HELLO%20IGBot%20PASS)
+### _Unzip The tool. You Have To Enter Password! Contact Me [![Static Badge](https://img.shields.io/badge/Nihal-greer?style=plastic&logo=whatsapp&logoColor=black)](https://wa.me/919605945309?text=HELLO%20IGBot%20PASS)_
 
 ```
 unzip IG-CMT.zip
