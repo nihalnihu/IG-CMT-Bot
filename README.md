@@ -1,4 +1,5 @@
 
+
 <p align="center"> <img src="https://github.com/nihalnihu/AutoIG-CMT/assets/72502160/5f6c0b5a-fbf1-4afa-88df-9386751ca607" alt="hi" width="100" height="100"></p>
 
 <p align="center">
@@ -53,7 +54,7 @@ git clone https://github.com/nihalnihu/AutoIG-CMT.git
 cd AutoIG-CMT
 ```
 
-### _Unzip The tool. You Have To Enter Password! Contact Me [![Static Badge](https://img.shields.io/badge/Nihal-greer?style=plastic&logo=whatsapp&logoColor=black)](https://wa.me/919605945309?text=HELLO%20IGBot%20PASS)_
+### _Unzip The tool. You Have To Enter Password! Contact Me_
 
 ```
 unzip IG-CMT.zip
@@ -102,6 +103,18 @@ bash update.sh
 ```
 unzip -P <PASSWORD> -o IG-CMT.zip
 ```
+</details>
+
+<details>
+<summary>Contact Me</summary>
+ <br>
+ 
+ [![Nihal](https://img.shields.io/badge/Message_On_Whatsapp-4CBB17?style=plastic&logo=whatsapp&logoColor=black)](https://wa.me/919605945309?text=HELLO%20IGBot%20PASS)
+
+[![Nihal](https://img.shields.io/badge/Instagram-C13584?style=plastic&logo=instagram&logoColor=black&logoSize=auto)](https://www.instagram.com/nihh____al)
+
+ [![Nihal](https://img.shields.io/badge/Telegram-blue?style=plastic&logo=telegram&logoSize=auto)](https://t.me/nihh_all)
+
 </details>
 
 <details>
