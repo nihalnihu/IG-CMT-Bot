@@ -1,5 +1,4 @@
 
-
 <p align="center"> <img src="https://github.com/nihalnihu/AutoIG-CMT/assets/72502160/5f6c0b5a-fbf1-4afa-88df-9386751ca607" alt="hi" width="100" height="100"></p>
 
 <p align="center">
@@ -9,11 +8,34 @@ IＮＳＴＡＧＲＡＭ</p>
 <p align="center">ＣＯＭＭＥＮＴ</p>
 <p align="center">
 ＢＯＴ</p>
+
+<br>
+
+<div align="center">
+ 
+## contact us 
+
+</div>
+
+<p align="center">
+  <a href="http://t.me/nihh_all">
+    <img src="https://img.shields.io/badge/Telegram-blue?style=flat-square&logo=telegram&logoSize=auto" alt="Nihal"/>
+  </a>
+</p>
+
+ <p align="center"> 
+   <a href="https://wa.me/919605945309"
+    text=HELLO%20IGBot"><img src="https://img.shields.io/badge/Whatsapp-4CBB17?style=flat-square&logo=whatsapp&logoSize=auto&logoColor=black" alt="Nihal"></a>
+</p> 
+
+<p align="center"><a href="https://www.instagram.com/nihh____al"><img src="https://img.shields.io/badge/Instagram-C13584?style=flat-square&logo=instagram&logoColor=black&logoSize=auto" alt="Nihal"></a>
+</p>
+
 <details>
 <summary>Tutorial</summary>
  <br>
  
- ![Static Badge](https://img.shields.io/badge/Tutorial_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white&link=https%3A%2F%2Fwa.me%2F919605945309%3Ftext%3DHELLO%2520IGBot%2520PASS)
+ ![Tutorial](https://img.shields.io/badge/Tutorial_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white&link=https%3A%2F%2Fwa.me%2F919605945309%3Ftext%3DHELLO%2520IGBot%2520PASS)
  
 </details>
 <details>
@@ -54,7 +76,7 @@ git clone https://github.com/nihalnihu/AutoIG-CMT.git
 cd AutoIG-CMT
 ```
 
-### _Unzip The tool. You Have To Enter Password! [![Static Badge](https://img.shields.io/badge/Contact_Me-black?style=social&logo=telegram&logoColor=black&logoSize=auto&link=https%3A%2F%2Fgithub.com%2Fnihalnihu%2FIG-CMT-Bot%2Fedit%2FIGBot%2FREADME.md%23message-via-telegram)]([https://github.com/nihalnihu/IG-CMT-Bot/edit/IGBot/README.md#message-via-telegram)](https://github.com/nihalnihu/IG-CMT-Bot?tab=readme-ov-file#message-via-telegram)_
+### _Unzip The tool. You Have To Enter Password! [![Static Badge](https://img.shields.io/badge/Contact_Me-black?style=social&logo=telegram&logoColor=black&logoSize=auto&link=https%3A%2F%2Fgithub.com%2Fnihalnihu%2FIG-CMT-Bot%2Fedit%2FIGBot%2FREADME.md%23message-via-telegram)](https://github.com/nihalnihu/IG-CMT-Bot?tab=readme-ov-file#message-via-telegram)_
 
 ```
 unzip IG-CMT.zip
@@ -103,20 +125,6 @@ bash update.sh
 ```
 unzip -P <PASSWORD> -o IG-CMT.zip
 ```
-</details>
-
-<details>
-<summary>Contact Me</summary>
- <br>
-
-### Message Via telegram
-
-  [![Nihal](https://img.shields.io/badge/Telegram-blue?style=plastic&logo=telegram&logoSize=auto)](https://t.me/nihh_all)
-
- [![Nihal](https://img.shields.io/badge/Whatsapp-4CBB17?style=plastic&logo=whatsapp&logoSize=auto&logoColor=black)](https://wa.me/919605945309?text=HELLO%20IGBot%20PASS)
-
-[![Nihal](https://img.shields.io/badge/Instagram-C13584?style=plastic&logo=instagram&logoColor=black&logoSize=auto)](https://www.instagram.com/nihh____al)
-
 </details>
 
 <details>
