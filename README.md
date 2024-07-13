@@ -128,3 +128,15 @@ https://github.com/nihalnihu/AutoIG-CMT/assets/70343963/3c02db1e-f6cd-447a-b160-
 # Sending Comments...
 https://github.com/nihalnihu/AutoIG-CMT/assets/70343963/4e7ed7bf-f5a7-4cb5-b893-162fc6cac519
 </details>
+
+
+## Support
+Join Our <a href="https://t.me/TG_BotCreator">Telegram Channel</a> For Updates.
+
+Report Bugs <a href="https://t.me/TG_BotCreatorSupport">Support Group</a>, Give Feature Requests There..🤠
+
+[![Terminal Bots](https://img.shields.io/badge/Whatsapp%20Group-green?style=for-the-badge&logo=whatsapp&logoColor=black&logoSize=black)](https://chat.whatsapp.com/K8DrSvnopVQE8BMT9zZfgZ)
+
+## Credits
+
+Thanks to <a href="https://github.com/darkhacker34">Me</a> And <a href="https://github.com/nihalnihu">Nihal</a>, <a href="https://openai.com/chatgpt">ChatGPT</a>
