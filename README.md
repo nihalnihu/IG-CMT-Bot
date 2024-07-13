@@ -13,7 +13,7 @@ IＮＳＴＡＧＲＡＭ</p>
 
 <div align="center">
  
-## contact us
+## Contact Us
 
 </div>
 
@@ -129,6 +129,7 @@ https://github.com/nihalnihu/AutoIG-CMT/assets/70343963/3c02db1e-f6cd-447a-b160-
 https://github.com/nihalnihu/AutoIG-CMT/assets/70343963/4e7ed7bf-f5a7-4cb5-b893-162fc6cac519
 </details>
 
+<br>
 
 ## Support
 Join Our <a href="https://t.me/TG_BotCreator">Telegram Channel</a> For Updates.
