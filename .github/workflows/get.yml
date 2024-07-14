@@ -1,4 +1,4 @@
-name: IG CMT
+name: Run Encrypted Script
 
 on: [push]
 
@@ -9,11 +9,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: IG CMT BOT
+      - name: Run Script
+        env:
+          MY_SECRET: ${{ secrets.GETCODE }}
         run: |
-          import base64
-
-          encoded_code = "${{ secrets.GETCODE }}"
-          decoded = base64.b64decode(encoded_code)
-
-          exec(decoded)
+          python -c "import os; print(os.environ['GETCODE'])"
