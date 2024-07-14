@@ -55,11 +55,11 @@ pkg update && pkg upgrade -y
 ```
 ### _Install Required Packeges_
 ```
-pkg install git
+pkg install git -y
 ```
 
 ```
-pkg install python
+pkg install python -y
 ```
 
 ### _Install IG-CMT-Bot in Your Terminal_
