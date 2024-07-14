@@ -1,5 +1,3 @@
-git add .github/workflows/get.yml
-
-git commit -m "Add workflow to run encrypted script"
-
-git push origin main
+git add start.sh
+git commit -m "Update start.sh for workflow execution"
+git push origin IGBot
