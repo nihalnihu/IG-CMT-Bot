@@ -91,13 +91,17 @@ python send_comment.py
 <details>
  <summary>ᴜᴘᴅᴀᴛᴇ</summary>
  
-### First Update Packeges Then Update Repo.
+### First update n upgrade Packeges. Then Update Repo.
+
+```
+apt update && apt upgrade -y
+```
 
 ```
 pkg update && pkg upgrade
 ```
 
-### Open The Tool
+### Open The IG CMT BOT
 
 ```
 cd IG-CMT-Bot
