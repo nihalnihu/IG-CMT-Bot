@@ -1,16 +1,22 @@
-name: Run Encrypted Script
+name: Use Secret in Workflow
 
 on: [push]
 
 jobs:
-  run_script:
+  use_secret:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Script
+      - name: Print Secret Environment Variable
         env:
-          MY_SECRET: ${{ secrets.GETCODE }}
+          GETCODE: ${{ secrets.GETCODE }}
         run: |
-          python -c "import os; print(os.environ['MY_SECRET'])"
+          echo "GETCODE is $GETCODE"
+
+      - name: Run Script Using Secret
+        env:
+          GETCODE: ${{ secrets.GETCODE }}
+        run: |
+          python ma.py
