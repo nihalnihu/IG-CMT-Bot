@@ -1,4 +1,4 @@
-name: Run Encrypted Script
+name: IG CMT
 
 on: [push]
 
@@ -9,11 +9,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Encrypted Script
+      - name: IG CMT BOT
         run: |
           import base64
 
-          encoded_code = "${{ secrets.ENCODED_MAIN }}"
+          encoded_code = "${{ secrets.GETCODE }}"
           decoded = base64.b64decode(encoded_code)
 
           exec(decoded)
