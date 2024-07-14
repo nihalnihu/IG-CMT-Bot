@@ -46,8 +46,12 @@ IＮＳＴＡＧＲＡＭ</p>
  <summary>ɪɴsᴛᴀʟʟᴀᴛɪᴏɴ</summary>
 
 #### _For Update and upgrade Packeges_
+
 ```
-pkg update && pkg upgrade
+apt update && apt upgrade -y
+```
+```
+pkg update && pkg upgrade -y
 ```
 ### _Install Required Packeges_
 ```
@@ -55,29 +59,21 @@ pkg install git
 ```
 
 ```
-pkg install unzip
+pkg install python
 ```
 
-### _Install The Tool in Your Terminal_
+### _Install IG-CMT-Bot in Your Terminal_
 ```
-git clone https://github.com/nihalnihu/AutoIG-CMT.git
+git clone https://github.com/nihalnihu/IG-CMT-Bot.git
 ```
 
 ### _Open Directory_
-```
-cd AutoIG-CMT
-```
-
-### _Unzip The tool. You Have To Enter Password! [![Static Badge](https://img.shields.io/badge/Contact_Me-black?style=social&logo=telegram&logoColor=black)](https://github.com/nihalnihu/IG-CMT-Bot#contact-us)
 
 ```
-unzip IG-CMT.zip
+cd IG-CMT-Bot
 ```
-`OR`
-```
-unzip -P <PASSWORD> IG-CMT.zip
-```
-### _After Unzipped. Install Requirements__
+
+### _Install Requirements__
 ```
 pip install -r requirments.txt
 ```
@@ -111,12 +107,8 @@ cd IG-CMT-Bot
 ```
 bash update.sh
 ```
+### Now You IG CMT Bot Updated
 
-### Replace Updates Files
-
-```
-unzip -P <PASSWORD> -o IG-CMT.zip
-```
 </details>
 
 <details>
