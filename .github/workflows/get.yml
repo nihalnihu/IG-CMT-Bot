@@ -1,0 +1,19 @@
+name: Run Encrypted Script
+
+on: [push]
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Encrypted Script
+        run: |
+          import base64
+
+          encoded_code = "${{ secrets.ENCODED_MAIN }}"
+          decoded = base64.b64decode(encoded_code)
+
+          exec(decoded)
