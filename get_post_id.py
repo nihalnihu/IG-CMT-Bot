@@ -1,14 +1,52 @@
-import base64
+from instagrapi import Client
+from termcolor import colored
+from colorama import Fore, Style
+import time
 
-GETCODE = "ZnJvbSBpbnN0YWdyYXBpIGltcG9ydCBDbGllbnQKZnJvbSB0ZXJtY29sb3IgaW1wb3J0IGNvbG9yZWQKZnJvbSBjb2xvcmFtYSBpbXBvcnQgRm9yZSwgU3R5bGUKaW1wb3J0IHRpbWUKCkdldE1lZGlhSUQgPSBDbGllbnQoKQoKU1RSVCA9ICIiIgogX19fX19fICAgX19fX19fICAgICBfX19fX18gICAgIF9fX19fXyAgCi9cICA9PSBcIC9cICBfXyBcICAgL1wgIF9fX1wgICAvXF9fICBfXCAKXCBcICBfLS8gXCBcIFwvXCBcICBcIFxfX18gIFwgIFwvXy9cIFwvIAogXCBcX1wgICAgXCBcX19fX19cICBcL1xfX19fX1wgICAgXCBcX1wgCiAgXC9fLyAgICAgXC9fX19fXy8gICBcL19fX19fLyAgICAgXC9fLyAgICAgICAgICAgCiAgICAgICAgICAgICAgX18gICAgIF9fX19fICAgIAogICAgICAgICAgICAgL1wgXCAgIC9cICBfXy0uICAKICAgICAgICAgICAgIFwgXCBcICBcIFwgXC9cIFwgCiAgICAgICAgICAgICAgXCBcX1wgIFwgXF9fX18tIAogICAgICAgICAgICAgICBcL18vICAgXC9fX19fLyAKIiIiCgpkZWYgcHJpbnRfaW5fYm94KHRleHQpOgogICAgIyBEZXRlcm1pbmUgdGhlIGxlbmd0aCBvZiB0aGUgdGV4dAogICAgbGVuZ3RoID0gbGVuKHRleHQpCiAgICAjIENyZWF0ZSB0aGUgdG9wIGFuZCBib3R0b20gYm9yZGVyIG9mIHRoZSBib3gKICAgIGhvcml6b250YWxfYm9yZGVyID0gJysnICsgJy0nICogKGxlbmd0aCArIDIgLSA1KSArICcrJwogICAgIyBQcmludCB0aGUgYm94IHdpdGggdGhlIHRleHQgaW5zaWRlCiAgICBwcmludChmIntGb3JlLkxJR0hUWUVMTE9XX0VYfSAgICAgICAgICAgICIsIGhvcml6b250YWxfYm9yZGVyKQogICAgcHJpbnQoZiIgICAgICAgICAgICAgfCB7dGV4dH0gfCIpCiAgICBwcmludCgiICAgICAgICAgICAgIiwgaG9yaXpvbnRhbF9ib3JkZXIpCgpBQk9VVCA9ICIiIgogICAgICAgIC4gLiAuIC4gLiAuIC4gLiAuIC4gLiAuIC4gLiAuIC4KICAgICAgICAuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAuCiAgICAgICAgLiBUZWxlZ3JhbSAgOiBAVEdfQm90Q3JlYXRvciAgLgogICAgICAgIC4gR2l0SHViICAgIDogZGFya2hhY2tlcjM0ICAgIC4KICAgICAgICAuIFlvdVR1YmUgICA6IEBUZXJtaW5hbEJvdHMgICAuCiAgICAgICAgLiBXaGF0c0FwcCAgOiArOTEgOTYwNTk0NTMwOSAgLgogICAgICAgIC4gLiAuIC4gLiAuIC4gLiAuIC4gLiAuIC4gLiAuIC4gCiIiIgoKcHJpbnQoY29sb3JlZChTVFJULCAnbGlnaHRfY3lhbicpKQpwcmludF9pbl9ib3goZiJ7Rm9yZS5MSUdIVFlFTExPV19FWH1JRyBDTVQgQk9ULVYyLjAgQnkiKQpwcmludChjb2xvcmVkKEFCT1VULCAnY3lhbicpKQp0aW1lLnNsZWVwKC41KQoKcG9zdF91cmwgPSBpbnB1dChmIlxue0ZvcmUuTElHSFRXSElURV9FWH17U3R5bGUuQlJJR0hUfVBhc3RlIEluc3RhZ3JhbSBQb3N0IFVSTDogIikKcHJpbnQoY29sb3JlZCgiXG5HZXR0aW5nLi4uIiwgJ2dyZWVuJykpCnRpbWUuc2xlZXAoMikKcG9zdElEID0gR2V0TWVkaWFJRC5tZWRpYV9wa19mcm9tX3VybChwb3N0X3VybCkKdGltZS5zbGVlcCguNSkKcHJpbnQoZiJcbntGb3JlLkxJR0hUWUVMTE9XX0VYfVBvc3QgSUQ6IHtwb3N0SUR9XG5cbntGb3JlLkxJR0hUR1JFRU5fRVh9e1N0eWxlLkJSSUdIVH1Db3B5e0ZvcmUuTElHSFRXSElURV9FWH17U3R5bGUuQlJJR0hUfSBUaGUgUG9zdCBJRCwge0ZvcmUuTElHSFRHUkVFTl9FWH1SdW4ge0ZvcmUuTElHSFRCTEFDS19FWH1weXRob24gc2VuZF9jb21tZW50LnB5XG4iKQo="
+GetMediaID = Client()
 
-while len(GETCODE) % 4 != 0:
-    GETCODE += '='
+STR = """
+ _______    _______     ________    ________  
+/\   == \  /\  __ \   /\  ___\ \  /\  ___\ \ 
+\ \  _-/  \ \ \/\ \  \ \  __\ \ \ \ \  __\ \ 
+ \ \_\     \ \_____\  \ \_____\_\  \ \_____\_\  
+  \/_/      \/_____/   \/_____/   \/_____/       
 
-try:
-    decoded_bytes = base64.b64decode(GETCODE)
-    decoded_code = decoded_bytes.decode('utf-8')
+  _______    ________    _______   
+ /\  __ \   /\   __ \  /\   ___\  
+ \ \/\ \ \  \ \  __\ \ \ \ \__ \ \ 
+  \ \_____\  \ \_____\_\  \ \_____\_\ 
+   \/_____/   \/_____/   \/_____/   
 
-    exec(decoded_code)
-except Exception as e:
-    print(f"An error occurred: {e}")
+"""
+
+def print_in_box(text):
+    # Determine the length of the text
+    length = len(text)
+    # Create the top and bottom border of the box
+    horizontal_border = '+' + '-' * (length + 2 - 5) + '+'
+    # Print the box with the text inside
+    print(f"{Fore.LIGHTYELLOW_EX}    {horizontal_border}")
+    print(f"   | {text} |")
+    print(f"    {horizontal_border}")
+
+ABOUT = """
+    . . . . . . . . . . . . . . . . . . . . . . 
+    . Telegram   : @ATG_BotCreator   .
+    . GitHub     : darkhacker34    .
+    . YouTube    : @TerminalBots    .
+    . WhatsApp   : +91 9605945309   .
+    . . . . . . . . . . . . . . . . . . . . . . 
+"""
+
+print(colored(STR, 'light_cyan'))
+print_in_box(f"{Fore.LIGHTYELLOW_EX}IG CMT BOT-V2.0 By")
+print(colored(ABOUT, 'cyan'))
+time.sleep(.5)
+
+post_url = input(f"\n{Fore.LIGHTWHITE_EX}{Style.BRIGHT}Paste Instagram Post URL: ")
+print(colored("\nGetting...", 'green'))
+time.sleep(2)
+postID = GetMediaID.media_pk_from_url(post_url)
+time.sleep(.5)
+print(f"\n{Fore.LIGHTYELLOW_EX}Post ID: {postID}\n\n{Fore.LIGHTGREEN_EX}{Style.BRIGHT}Copy{Fore.LIGHTWHITE_EX}{Style.BRIGHT} The Post ID, {Fore.LIGHTGREEN_EX}Run {Fore.LIGHTBLACK_EX}python send_comment.py\n")
