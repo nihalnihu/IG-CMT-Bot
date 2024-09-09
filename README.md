@@ -62,6 +62,10 @@ pkg install git -y
 pkg install python -y
 ```
 
+```
+pkg install python-pip -y
+```
+
 ### _Install IG-CMT-Bot in Your Terminal_
 ```
 git clone https://github.com/nihalnihu/IG-CMT-Bot.git
