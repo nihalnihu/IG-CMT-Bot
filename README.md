@@ -68,7 +68,12 @@ pkg install python-pip -y
 ```
  pkg install ndk-sysroot -y
 ```
-
+```
+pkg install libjpeg-turbo -y
+```
+```
+pkg install zlib -y
+```
 ### _Install IG-CMT-Bot in Your Terminal_
 ```
 git clone https://github.com/nihalnihu/IG-CMT-Bot.git
