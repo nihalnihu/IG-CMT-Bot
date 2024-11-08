@@ -65,6 +65,9 @@ pkg install python -y
 ```
 pkg install python-pip -y
 ```
+```
+ pkg install ndk-sysroot -y
+```
 
 ### _Install IG-CMT-Bot in Your Terminal_
 ```
@@ -80,7 +83,7 @@ cd IG-CMT-Bot
 ### _Install Requirements__
 
 ```
-pip install Pillow
+pip install Pillow --no-cache-dir
 ```
 
 ```
