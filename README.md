@@ -78,6 +78,15 @@ cd IG-CMT-Bot
 ```
 
 ### _Install Requirements__
+
+```
+pip install Pillow
+```
+
+```
+pip install instagrapi==2.0.0
+```
+
 ```
 pip install -r requirments.txt
 ```
