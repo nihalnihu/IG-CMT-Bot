@@ -5,8 +5,8 @@ import time
 
 GetMediaID = Client()
 
-STR = """
 
+STR = """
 ░█▀▀█ █▀▀ ▀▀█▀▀ 　
 ░█─▄▄ █▀▀ ──█── 　
 ░█▄▄█ ▀▀▀ ──▀── 　
@@ -15,20 +15,24 @@ STR = """
 ░█▄▄█ █──█ ▀▀█ ──█── 　 ░█─ █──█
 ░█─── ▀▀▀▀ ▀▀▀ ──▀── 　 ▄█▄ ▀▀▀─
 """
+
 def print_in_box(text):
     # Determine the length of the text
     length = len(text)
     # Create the top and bottom border of the box
-    horizontal_border = '+' + '-' * (length + 2 - 5) + '+'        # Print the box with the text inside
-    print(f"{Fore.LIGHTYELLOW_EX}    {horizontal_border}")        print(f"   | {text} |")
-    print(f"    {horizontal_border}")                         
+    horizontal_border = '+' + '-' * (length + 2 - 5) + '+'
+    # Print the box with the text inside
+    print(f"{Fore.LIGHTYELLOW_EX}    {horizontal_border}")
+    print(f"   | {text} |")
+    print(f"    {horizontal_border}")
+
 ABOUT = """
-    . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . 
     . Telegram   : @ATG_BotCreator   .
     . GitHub     : darkhacker34    .
     . YouTube    : @TerminalBots    .
     . WhatsApp   : +91 9605945309   .
-    . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . 
 """
 
 print(colored(STR, 'light_cyan'))
