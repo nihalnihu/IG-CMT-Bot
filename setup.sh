@@ -6,12 +6,6 @@ YELLOW='\033[1;33m'
 BRIGHT_BLACK='\033[1;90m'
 NC='\033[0m' # No color
 
-clear
-
-# Update package list
-echo -e "\n${YELLOW}Updating package list...${NC}"
-pkg update -y
-
 # Install required packages
 clear
 echo -e "\n${YELLOW}Installing git...${NC}"
