@@ -61,16 +61,27 @@ print_sm_box(SM)
 time.sleep(1)
 print(f"\n{Fore.LIGHTGREEN_EX}{Style.BRIGHT}✮ ᴅᴏɴ'ᴛ ᴡᴏʀʀʏ ᴡᴇ ᴄᴀɴ'ᴛ ꜱᴇᴇ ʏᴏᴜʀ ɪɴꜱᴛᴀɢʀᴀᴍ ᴜꜱᴇʀɴᴀᴍᴇ ᴏʀ ᴘᴀꜱꜱᴡᴏʀᴅ\nᴀɴᴅ ᴡᴇ ᴅᴏ ɴᴏᴛ ꜱᴛᴏʀᴇ ʏᴏᴜʀ ᴅᴇᴛᴀɪʟꜱ. ʏᴏᴜ ᴄᴀɴ ᴛʀᴜꜱᴛ ᴜꜱ.")
 
-# Prompt for credentials
-username = input(f"\n{Style.BRIGHT}{Fore.WHITE}Enter Your Instagram Username: ")
-password = getpass.getpass(prompt=f"{Style.BRIGHT}{Fore.WHITE}Enter{Fore.LIGHTBLACK_EX} '{username}' {Fore.WHITE}Password: ")
+# Prompt for credentials with validation for non-empty username
+while True:
+    username = input(f"\n{Style.BRIGHT}{Fore.WHITE}Enter Your Instagram Username: ").strip()
+    if username:  # Check if the username is not empty
+        break  # Exit the loop if a valid username is entered
+    print(f"{Style.BRIGHT}{Fore.RED}Username cannot be empty. Please enter a valid username.")
+
+# Prompt for password with validation for non-empty password
+while True:
+    password = getpass.getpass(prompt=f"{Style.BRIGHT}{Fore.WHITE}Enter{Fore.LIGHTBLACK_EX} '{username}' {Fore.WHITE}Password: ").strip()
+    if password:  # Check if the password is not empty
+        break  # Exit the loop if a valid password is entered
+    print(f"{Style.BRIGHT}{Fore.RED}Password cannot be empty. Please enter a valid password.")
+
 
 # Login attempt with improved error handling
-print(colored("\nAttempting to login...", 'green'))
+print("\nAttempting to login...")
 try:
     bot.login(username, password)
     print(f"\n{Fore.LIGHTGREEN_EX}{username} Login Successful...")
-    time.sleep(2)
+    time.sleep(.5)
 except Exception as e:
     error_message = str(e).lower()
     if "credentials" in error_message or "password" in error_message:
@@ -81,13 +92,34 @@ except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error: {str(e)}")  # For any other unexpected errors
     sys.exit(1)
 
-# Prompt for post ID
-POSTID = input(colored(f"\n{Style.BRIGHT}Enter Instagram Post ID: ", 'cyan'))
-time.sleep(0.5)
 
-# Prompt for comment message
-commentmsg = input(f"\n{Style.BRIGHT}{Fore.LIGHTYELLOW_EX}Enter Comment Message: {Fore.LIGHTWHITE_EX}")
-time.sleep(0.5)
+
+# Prompt for post ID with a helper message in specific color
+print(f"\n{Fore.LIGHTWHITE_EX}Run {Fore.LIGHTBLACK_EX}'python get_post_id.py'{Fore.LIGHTWHITE_EX} if You Don't Have Target POST ID!")
+
+# Loop until the user enters a valid Post ID
+while True:
+    POSTID = input(f"\n{Fore.LIGHTCYAN_EX}Enter Instagram Post ID: {Fore.RESET}").strip()
+    if not POSTID:
+        print(f"{Style.BRIGHT}{Fore.RED}You can't leave it empty. Please enter a valid POST ID.")
+    else:
+        try:
+            # Attempt to retrieve the post information to verify validity
+            bot.media_info(POSTID)
+            break  # Exit the loop if the Post ID is valid
+        except Exception:
+            print(f"{Style.BRIGHT}{Fore.RED}Invalid Post ID. Please enter a valid POST ID.")
+    time.sleep(0.5)
+
+
+# Prompt for comment message with validation for non-empty input
+while True:
+    commentmsg = input(f"\n{Style.BRIGHT}{Fore.LIGHTYELLOW_EX}Enter Comment Message: {Fore.RESET}").strip()
+    if commentmsg:  # Check if the comment is not empty
+        break  # Exit the loop if a valid comment is entered
+    else:
+        print(f"{Style.BRIGHT}{Fore.RED}You can't leave it empty. Please Enter a Comment Message.")
+    time.sleep(0.5)
 
 # Prompt for comment count
 while True:
@@ -148,3 +180,4 @@ while i <= int(cmtcount):
         break
 
 print(f"\n\n\n         {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Successfully Sent {cmtcount} Comments")
+      
