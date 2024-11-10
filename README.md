@@ -53,17 +53,7 @@ apt update && apt upgrade -y
 ```
 pkg update && pkg upgrade -y
 ```
-### _Install Required Packeges_
-```
-pkg install git -y
-```
 
-```
-pkg install python -y
-```
-```
-pkg install libjpeg-turbo -y
-```
 ### _Install IG-CMT-Bot in Your Terminal_
 ```
 git clone https://github.com/nihalnihu/IG-CMT-Bot.git
@@ -75,18 +65,10 @@ git clone https://github.com/nihalnihu/IG-CMT-Bot.git
 cd IG-CMT-Bot
 ```
 
-### _Install Requirements__
+### _Install Required Packeges_
 
 ```
-pip install Pillow --no-cache-dir
-```
-
-```
-pip install instagrapi==2.0.0
-```
-
-```
-pip install -r requirments.txt
+bash setup.sh
 ```
 
 ### _Get Instagram Post ID (Must)_
