@@ -2,47 +2,73 @@ from instagrapi import Client
 from termcolor import colored
 from colorama import Fore, Style
 import time
+import os
 
+# Clear screen for better appearance
+os.system("clear")
+
+# Initialize Instagram client
 GetMediaID = Client()
 
-
+# Define ASCII Art and ABOUT information
 STR = """
-░█▀▀█ █▀▀ ▀▀█▀▀ 　
-░█─▄▄ █▀▀ ──█── 　
-░█▄▄█ ▀▀▀ ──▀── 　
 
-░█▀▀█ █▀▀█ █▀▀ ▀▀█▀▀ 　 ▀█▀ █▀▀▄
-░█▄▄█ █──█ ▀▀█ ──█── 　 ░█─ █──█
-░█─── ▀▀▀▀ ▀▀▀ ──▀── 　 ▄█▄ ▀▀▀─
+
+█▀▀█ █▀▀█ █▀▀ ▀▀█▀▀ 　 ▀█▀ █▀▀▄
+█▄▄█ █  █ ▀▀█   █   　  █  █  █
+█    ▀▀▀▀ ▀▀▀   ▀   　 ▄█▄ ▀▀▀
 """
 
-def print_in_box(text):
-    # Determine the length of the text
-    length = len(text)
-    # Create the top and bottom border of the box
-    horizontal_border = '+' + '-' * (length + 2 - 5) + '+'
-    # Print the box with the text inside
-    print(f"{Fore.LIGHTYELLOW_EX}    {horizontal_border}")
-    print(f"   | {text} |")
-    print(f"    {horizontal_border}")
+ABOUT = [
+    "Telegram   : @TG_BotCreator",
+    "GitHub     : darkhacker34",
+    "YouTube    : @TerminalBots",
+    "WhatsApp   : +91 9605945309"
+]
 
-ABOUT = """
-    . . . . . . . . . . . . . . . . . . . . . . 
-    . Telegram   : @ATG_BotCreator   .
-    . GitHub     : darkhacker34    .
-    . YouTube    : @TerminalBots    .
-    . WhatsApp   : +91 9605945309   .
-    . . . . . . . . . . . . . . . . . . . . . . 
-"""
+def print_stylish_about_box(about_lines):
+    # Determine the max line length for consistent borders
+    max_length = max(len(line) for line in about_lines)
+    # Fancy border components
+    top_border = f"╭{'─' * (max_length + 2)}╮"
+    bottom_border = f"╰{'─' * (max_length + 2)}╯"
 
+    # Print the top border, each line of ABOUT text centered within the border, and the bottom border
+    print(colored(top_border, "cyan"))
+    for line in about_lines:
+        # Center each line in the box with padding spaces
+        print(colored(f"│ {line.ljust(max_length)} │", "cyan"))
+    print(colored(bottom_border, "cyan"))
+
+def print_centered_box(text, box_length=None):
+    # Find the length of the text for centering, or use the provided box length
+    length = box_length if box_length else len(text)
+    horizontal_border = f"╭{'─' * (length + 2)}╮"
+    bottom_border = f"╰{'─' * (length + 2)}╯"
+
+    # Center the label and display it with the box
+    print(colored(horizontal_border, "light_yellow"))
+    print(colored(f"│ {text.center(length)} │", "light_yellow"))
+    print(colored(bottom_border, "light_yellow"))
+
+# Displaying the ASCII Art aligned to the left
 print(colored(STR, 'light_cyan'))
-print_in_box(f"{Fore.LIGHTYELLOW_EX}IG CMT BOT-V2.0 By")
-print(colored(ABOUT, 'cyan'))
-time.sleep(.5)
 
+# Display "IG CMT BOT-V2.0" label centered within the ABOUT section
+max_about_length = max(len(line) for line in ABOUT)  # Find the max length of ABOUT for consistent centering
+print_centered_box("IG CMT BOT-V2.1", max_about_length)
+
+# Directly display ABOUT information in a stylish bordered box (no extra space)
+print_stylish_about_box(ABOUT)
+time.sleep(0.5)
+
+# Get Instagram post URL from user
 post_url = input(f"\n{Fore.LIGHTWHITE_EX}{Style.BRIGHT}Paste Instagram Post URL: ")
 print(colored("\nGetting...", 'green'))
 time.sleep(2)
+
+# Retrieve and display the post ID
 postID = GetMediaID.media_pk_from_url(post_url)
-time.sleep(.5)
-print(f"\n{Fore.LIGHTYELLOW_EX}Post ID: {postID}\n\n{Fore.LIGHTGREEN_EX}{Style.BRIGHT}Copy{Fore.LIGHTWHITE_EX}{Style.BRIGHT} The Post ID, {Fore.LIGHTGREEN_EX}Run {Fore.LIGHTBLACK_EX}python send_comment.py\n")
+time.sleep(0.5)
+print(f"\n{Fore.LIGHTYELLOW_EX}Post ID: {postID}\n\n{Fore.LIGHTGREEN_EX}{Style.BRIGHT}Copy{Fore.LIGHTWHITE_EX}{Style.BRIGHT} the Post ID, "
+      f"{Fore.LIGHTGREEN_EX}then run {Fore.LIGHTBLACK_EX}python send_comment.py\n")
