@@ -57,7 +57,7 @@ pkg update && pkg upgrade -y
 ### _Install IG-CMT-Bot in Your Terminal_
 
 ```
-pkg install git
+pkg install git -y
 ```
 
 ```
