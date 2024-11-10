@@ -65,7 +65,7 @@ git clone https://github.com/nihalnihu/IG-CMT-Bot.git
 cd IG-CMT-Bot
 ```
 
-### _Install Required Packeges_
+### _Install Required Packeges & Libraries_
 
 ```
 bash setup.sh
