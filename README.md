@@ -61,18 +61,8 @@ pkg install git -y
 ```
 pkg install python -y
 ```
-
-```
-pkg install python-pip -y
-```
-```
- pkg install ndk-sysroot -y
-```
 ```
 pkg install libjpeg-turbo -y
-```
-```
-pkg install zlib -y
 ```
 ### _Install IG-CMT-Bot in Your Terminal_
 ```
