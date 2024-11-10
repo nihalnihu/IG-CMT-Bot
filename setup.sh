@@ -7,9 +7,6 @@ BRIGHT_BLACK='\033[1;90m'
 NC='\033[0m' # No color
 
 # Install required packages
-clear
-echo -e "\n${YELLOW}Installing git...${NC}"
-pkg install git -y
 
 clear
 echo -e "\n${YELLOW}Installing python...${NC}"
