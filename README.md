@@ -70,7 +70,7 @@ git clone https://github.com/nihalnihu/IG-CMT-Bot.git
 cd IG-CMT-Bot
 ```
 
-### _Install Required Packeges & Libraries_
+### _Install Required Packeges & Libraries (it will take 5-10 minutes)_
 
 ```
 bash setup.sh
