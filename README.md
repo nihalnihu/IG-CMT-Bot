@@ -27,7 +27,7 @@ IＮＳＴＡＧＲＡＭ</p>
 
  <div align="center">
   
-[![Tutorial](https://img.shields.io/badge/Tutorial_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/ngLGxqoOX8k?si=ISvoTPUKt7PtXYlC)
+[![Tutorial](https://img.shields.io/badge/Tutorial_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Wz8zQseGZR8?si=zzFZeP9oImn7vT0N)
  </div>
  
 <details>
