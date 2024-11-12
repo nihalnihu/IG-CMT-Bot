@@ -1,8 +1,7 @@
 from instagrapi import Client
 import time
 from termcolor import colored
-import getpass
-from colorama import Fore, Style
+import getpass                                          from colorama import Fore, Style
 import os
 import sys
 
@@ -100,8 +99,10 @@ print(f"\n{Fore.LIGHTWHITE_EX}Run {Fore.LIGHTBLACK_EX}'python get_post_id.py'{Fo
 # Loop until the user enters a valid Post ID
 while True:
     POSTID = input(f"\n{Fore.LIGHTCYAN_EX}Enter Instagram Post ID: {Fore.RESET}").strip()
-    if not POSTID:
-        print(f"{Style.BRIGHT}{Fore.RED}You can't leave it empty. Please enter a valid POST ID.")
+
+    # Check if the Post ID is empty or contains invalid characters (letters, commas, etc.)
+    if not POSTID.isdigit():
+        print(f"{Style.BRIGHT}{Fore.RED}Invalid Post ID. Please enter a valid POST ID.")
     else:
         try:
             # Attempt to retrieve the post information to verify validity
@@ -110,6 +111,8 @@ while True:
         except Exception:
             print(f"{Style.BRIGHT}{Fore.RED}Invalid Post ID. Please enter a valid POST ID.")
     time.sleep(0.5)
+
+
 
 
 # Prompt for comment message with validation for non-empty input
@@ -180,4 +183,3 @@ while i <= int(cmtcount):
         break
 
 print(f"\n\n\n         {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Successfully Sent {cmtcount} Comments")
-      
