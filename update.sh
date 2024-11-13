@@ -3,7 +3,7 @@ no="\033[1;33m"
 echo -e ${no}"\n\tPlease Subscribe My YouTube Channel"
 sleep 3
 
-yt_url="https://youtube.com/@hackeroli"
+yt_url="https://youtube.com/@terminalbots"
 termux-open-url "$yt_url"
 
 green="\033[1;32m"
