@@ -117,10 +117,14 @@ bash update.sh
  <summary>sᴀᴍᴘʟᴇ</summary>
 
 # Tool Running...
-https://github.com/nihalnihu/AutoIG-CMT/assets/70343963/3c02db1e-f6cd-447a-b160-d2357e7e7e91
+![Tool Running](https://raw.githubusercontent.com/nihalnihu/IG-CMT-Bot/refs/heads/IGBot/Images/IG%20CMT.jpg)
 
 # Sending Comments...
-https://github.com/nihalnihu/AutoIG-CMT/assets/70343963/4e7ed7bf-f5a7-4cb5-b893-162fc6cac519
+![Sending Comments](https://raw.githubusercontent.com/nihalnihu/IG-CMT-Bot/refs/heads/IGBot/Images/Auto%20Commenting.jpg)
+
+# Get Post ID...
+![Get Post ID](https://raw.githubusercontent.com/nihalnihu/IG-CMT-Bot/refs/heads/IGBot/Images/POST%20ID.jpg)
+
 </details>
 
 <br>
