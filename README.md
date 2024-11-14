@@ -116,14 +116,14 @@ bash update.sh
 <details>
  <summary>sᴀᴍᴘʟᴇ</summary>
 
+# Get Post ID...
+![Get Post ID](https://raw.githubusercontent.com/nihalnihu/IG-CMT-Bot/refs/heads/IGBot/Images/POST%20ID.jpg)
+
 # Tool Running...
 ![Tool Running](https://raw.githubusercontent.com/nihalnihu/IG-CMT-Bot/refs/heads/IGBot/Images/IG%20CMT.jpg)
 
 # Sending Comments...
 ![Sending Comments](https://raw.githubusercontent.com/nihalnihu/IG-CMT-Bot/refs/heads/IGBot/Images/Auto%20Commenting.jpg)
-
-# Get Post ID...
-![Get Post ID](https://raw.githubusercontent.com/nihalnihu/IG-CMT-Bot/refs/heads/IGBot/Images/POST%20ID.jpg)
 
 </details>
 
