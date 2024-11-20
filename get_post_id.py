@@ -52,18 +52,17 @@ def print_centered_box(text, box_length=None):
 # Displaying the ASCII Art aligned to the left
 print(colored(STR, 'light_cyan'))
 
-# Display "IG CMT BOT-V2.1" label centered within the ABOUT section
-max_about_length = max(len(line) for line in ABOUT)  # Find the max length of ABOUT for consistent centering
+max_about_length = max(len(line) for line in ABOUT)  
 print_centered_box("IG CMT BOT-V2.1", max_about_length)
 
-# Directly display ABOUT information in a stylish bordered box (no extra space)
+
 print_stylish_about_box(ABOUT)
 time.sleep(0.5)
 
-# Get Instagram post URL from user with input validation
+
 post_url = input(f"\n{Fore.LIGHTWHITE_EX}{Style.BRIGHT}Paste Instagram Post URL: ")
 
-# Validate that the URL is non-empty, is an Instagram URL, and specifically a post/reel/IGTV URL
+
 while not post_url.strip() or "instagram.com" not in post_url or not any(path in post_url for path in ["/p/", "/reel/", "/tv/"]):
     if not post_url.strip():
         print(colored("You can't leave it empty. Please enter an Instagram POST URL.", "red"))
@@ -74,7 +73,7 @@ while not post_url.strip() or "instagram.com" not in post_url or not any(path in
 print(colored("\nTrying... to Get POST ID", 'green'))
 time.sleep(2)
 
-# Retrieve and display the post ID
+
 try:
     postID = GetMediaID.media_pk_from_url(post_url)
 except Exception as e:

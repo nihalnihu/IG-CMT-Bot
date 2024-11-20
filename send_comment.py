@@ -10,7 +10,7 @@ import subprocess
 
 bot = Client()
 
-# Welcome banner
+
 START = """
                       ▀█▀ █▀▀█
                        █  █ ▄▄
@@ -21,7 +21,7 @@ START = """
                    █▄▄█ █   █   █
 """
 
-# Social media info
+
 SM = [
     "Telegram  : @TG_BotCreator",
     "GitHub    : darkhacker34",
@@ -29,7 +29,7 @@ SM = [
     "WhatsApp  : +91 9605945309"
 ]
 
-# Print centered box with dynamic width
+
 def print_centered_box(text):
     max_length = max(len(line) for line in SM + [text])
     horizontal_border_top = '╭' + '─' * (max_length + 4) + '╮'
@@ -39,7 +39,7 @@ def print_centered_box(text):
     print(f"           │{padding_text}  {text}  {padding_text} │")
     print(f"           {horizontal_border_bottom}{Fore.RESET}")
 
-# Print social media box
+
 def print_sm_box(sm_lines):
     max_length = max(len(line) for line in sm_lines)
     horizontal_border_top = '╭' + '─' * (max_length + 4) + '╮'
@@ -50,35 +50,35 @@ def print_sm_box(sm_lines):
         print(f"           │  {line}{padding}  │")
     print(f"           {horizontal_border_bottom}{Fore.RESET}")
 
-# Clear console based on OS
+
 def clear_console():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 clear_console()
 
-# Display welcome message
+
 print(colored(START, 'cyan'))
 print_centered_box("IG CMT BOT-V2.1")
 print_sm_box(SM)
 time.sleep(1)
 print(f"\n{Fore.LIGHTGREEN_EX}{Style.BRIGHT}✮ ᴅᴏɴ'ᴛ ᴡᴏʀʀʏ ᴡᴇ ᴄᴀɴ'ᴛ ꜱᴇᴇ ʏᴏᴜʀ ɪɴꜱᴛᴀɢʀᴀᴍ ᴜꜱᴇʀɴᴀᴍᴇ ᴏʀ ᴘᴀꜱꜱᴡᴏʀᴅ\nᴀɴᴅ ᴡᴇ ᴅᴏ ɴᴏᴛ ꜱᴛᴏʀᴇ ʏᴏᴜʀ ᴅᴇᴛᴀɪʟꜱ. ʏᴏᴜ ᴄᴀɴ ᴛʀᴜꜱᴛ ᴜꜱ.\n")
 
-# Prompt for credentials with validation for non-empty username
+
 while True:
     username = input(f"\n{Style.BRIGHT}{Fore.WHITE}Enter Your Instagram Username: ").strip()
-    if username:  # Check if the username is not empty
-        break  # Exit the loop if a valid username is entered
+    if username: 
+        break  
     print(f"{Style.BRIGHT}{Fore.RED}Username cannot be empty. Please enter a valid username.")
 
-# Prompt for password with validation for non-empty password
+
 while True:
     password = getpass.getpass(prompt=f"{Style.BRIGHT}{Fore.WHITE}Enter{Fore.LIGHTBLACK_EX} '{username}' {Fore.WHITE}Password: ").strip()
-    if password:  # Check if the password is not empty
-        break  # Exit the loop if a valid password is entered
+    if password:
+        break 
     print(f"{Style.BRIGHT}{Fore.RED}Password cannot be empty. Please enter a valid password.")
 
 
-# Login attempt with improved error handling
+
 print("\nAttempting to login...")
 try:
     bot.login(username, password)
@@ -91,26 +91,26 @@ except Exception as e:
     elif "username" in error_message:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error: Entered username '{username}' is incorrect!")
     else:
-        print(f"\n{Style.BRIGHT}{Fore.RED}Error: {str(e)}")  # For any other unexpected errors
+        print(f"\n{Style.BRIGHT}{Fore.RED}Error: {str(e)}")  
     sys.exit(1)
 
 
 
-# Prompt for post ID with a helper message in specific color
+
 print(f"\n{Fore.LIGHTWHITE_EX}Run {Fore.LIGHTBLACK_EX}'python get_post_id.py'{Fore.LIGHTWHITE_EX} if You Don't Have Target POST ID!")
 
-# Loop until the user enters a valid Post ID
+D
 while True:
     POSTID = input(f"\n{Fore.LIGHTCYAN_EX}Enter Instagram Post ID: {Fore.RESET}").strip()
     
-    # Check if the Post ID is empty or contains invalid characters (letters, commas, etc.)
+   
     if not POSTID.isdigit():
         print(f"{Style.BRIGHT}{Fore.RED}Invalid Post ID. Please enter a valid POST ID.")
     else:
         try:
-            # Attempt to retrieve the post information to verify validity
+           
             bot.media_info(POSTID)
-            break  # Exit the loop if the Post ID is valid
+            break 
         except Exception:
             print(f"{Style.BRIGHT}{Fore.RED}Invalid Post ID. Please enter a valid POST ID.")
     time.sleep(0.5)
@@ -118,16 +118,16 @@ while True:
 
 
 
-# Prompt for comment message with validation for non-empty input
+
 while True:
     commentmsg = input(f"\n{Style.BRIGHT}{Fore.LIGHTYELLOW_EX}Enter Comment Message: {Fore.RESET}").strip()
-    if commentmsg:  # Check if the comment is not empty
-        break  # Exit the loop if a valid comment is entered
+    if commentmsg:
+        break  
     else:
         print(f"{Style.BRIGHT}{Fore.RED}You can't leave it empty. Please Enter a Comment Message.")
     time.sleep(0.5)
 
-# Prompt for comment count
+
 while True:
     try:
         cmtcount = int(input(f"\n{Fore.LIGHTYELLOW_EX}{Style.BRIGHT}How Many Comments To Send: {Fore.LIGHTWHITE_EX}"))
@@ -137,7 +137,7 @@ while True:
 
 time.sleep(0.5)
 
-# Prompt for delay between comments
+
 while True:
     try:
         deley = int(input(f"\n{Fore.LIGHTWHITE_EX}{Style.BRIGHT}How Many Seconds to Delay: "))
@@ -148,7 +148,7 @@ while True:
 print(f"\n       If You Want To Stop?{Fore.LIGHTBLACK_EX} CTRL+C\n{Fore.RESET}")
 time.sleep(0.5)
 
-# Rounded box display for starting info
+
 def print_rounded_box(content):
     lines = content.split('\n')
     max_length = max(len(line) for line in lines)
@@ -171,33 +171,31 @@ print_rounded_box(FIRST.format(username, POSTID, commentmsg, cmtcount))
 
 R = "\t ʀᴇᴍᴀɪɴɪɴɢ   : {}"
 
-# Loop for sending comments with accurate remaining and success display
+
 i = 1
 while i <= cmtcount:
     try:
-        # Attempt to send the comment
+        
         bot.media_comment(POSTID, commentmsg)
         
-        # Calculate remaining comments
+        
         remaining = cmtcount - i
         
-        # Clear the current line to avoid leftover characters
+        
         sys.stdout.write("\033[K")
         
-        # Print the remaining and success count on the same line
+       
         print(f"\tRemaining: {remaining}  |  Success: {i}", end='\r', flush=True)
         
-        # Delay between comments
+     
         time.sleep(deley)
-        i += 1  # Increment the success counter
+        i += 1  
 
     except Exception as e:
-        # Display the error message and exit the loop if an error occurs
+        
         print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
         break
 
-
-# Final message showing the total comments sent
 print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Successfully Sent {i - 1} Comments\n")
 
 yt_url = "https://youtube.com/@terminalbots"
