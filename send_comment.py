@@ -99,7 +99,6 @@ except Exception as e:
 
 print(f"\n{Fore.LIGHTWHITE_EX}Run {Fore.LIGHTBLACK_EX}'python get_post_id.py'{Fore.LIGHTWHITE_EX} if You Don't Have Target POST ID!")
 
-D
 while True:
     POSTID = input(f"\n{Fore.LIGHTCYAN_EX}Enter Instagram Post ID: {Fore.RESET}").strip()
     
