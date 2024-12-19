@@ -45,7 +45,7 @@ IＮＳＴＡＧＲＡＭ</p>
 <details>
  <summary>ɪɴsᴛᴀʟʟᴀᴛɪᴏɴ</summary>
 
-#### _For Update and upgrade Packeges_
+#### _For Update and upgrade Packeges (Termux)_
 
 ```
 apt update && apt upgrade -y
@@ -54,17 +54,24 @@ apt update && apt upgrade -y
 pkg update && pkg upgrade -y
 ```
 
-### _Install IG-CMT-Bot in Your Terminal_
+### _Install Git_
 
+
+```For Termux```
 ```
-pkg install git -y
+pkg install git -y 
+``` 
+```For Linux```
 ```
+apt install git -y
+```
+### _Install IG-CMT-Bot_
 
 ```
 git clone https://github.com/nihalnihu/IG-CMT-Bot.git
 ```
 
-### _Open Directory_
+### _Open IG-BOT_
 
 ```
 cd IG-CMT-Bot
@@ -73,7 +80,15 @@ cd IG-CMT-Bot
 ### _Install Required Packeges & Libraries (it will take 5-10 minutes)_
 
 ```
-bash setup.sh
+chmod +x setup.sh
+```
+```For Termux```
+```
+./setup.sh
+```
+```For Linux```
+```
+source setup.sh
 ```
 
 ### _Get Instagram Post ID (Must)_
@@ -89,15 +104,6 @@ python send_comment.py
 <details>
  <summary>ᴜᴘᴅᴀᴛᴇ</summary>
  
-### First update n upgrade Packeges. Then Update Repo.
-
-```
-apt update && apt upgrade -y
-```
-
-```
-pkg update && pkg upgrade
-```
 
 ### Open The IG CMT BOT
 
@@ -107,7 +113,10 @@ cd IG-CMT-Bot
 
 ### Update Repo
 ```
-bash update.sh
+chmod +x update.sh
+```
+```
+./update.sh
 ```
 ### Now You IG CMT Bot Updated
 
