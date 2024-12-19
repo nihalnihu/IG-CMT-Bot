@@ -82,11 +82,6 @@ cd IG-CMT-Bot
 ```
 chmod +x setup.sh
 ```
-```For Termux```
-```
-./setup.sh
-```
-```For Linux```
 ```
 source setup.sh
 ```
