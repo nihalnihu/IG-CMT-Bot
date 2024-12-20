@@ -45,40 +45,68 @@ IＮＳＴＡＧＲＡＭ</p>
 <details>
  <summary>ɪɴsᴛᴀʟʟᴀᴛɪᴏɴ</summary>
 
-#### _For Update and upgrade Packeges (Termux)_
+
+<details>
+ <summary>Termux</summary>
+
+ #### _For Update and upgrade Packeges_
+
+```
+pkg update && pkg upgrade -y
+```
+### _Install Git_
+```
+pkg install git -y 
+```
+### _Install and Open IG-CMT-Bot_
+```
+git clone https://github.com/nihalnihu/IG-CMT-Bot.git
+```
+```
+cd IG-CMT-Bot
+```
+### _Install Required Packeges & Libraries (it will take 5-10 minutes)_
+```only for first time```
+```
+chmod +x setup.sh
+```
+```
+source setup.sh
+```
+### _Get Instagram Post ID (Must)_
+```
+python get_post_id.py
+```
+### _Send Auto Unlimited Comments._ 😜
+```
+python send_comment.py
+```
+</details>
+
+<details>
+ <summary>Linux</summary>
+
+#### _For Update and upgrade Packeges_
 
 ```
 apt update && apt upgrade -y
 ```
-```
-pkg update && pkg upgrade -y
-```
-
 ### _Install Git_
 
-
-```For Termux```
-```
-pkg install git -y 
-``` 
-```For Linux```
 ```
 apt install git -y
 ```
-### _Install IG-CMT-Bot_
+### _Install and Open IG-CMT-Bot_
 
 ```
 git clone https://github.com/nihalnihu/IG-CMT-Bot.git
 ```
-
-### _Open IG-BOT_
-
 ```
 cd IG-CMT-Bot
 ```
 
 ### _Install Required Packeges & Libraries (it will take 5-10 minutes)_
-
+```Only for First Time```
 ```
 chmod +x setup.sh
 ```
@@ -94,6 +122,8 @@ python get_post_id.py
 ```
 python send_comment.py
 ```
+
+</details>
 </details>
 
 <details>
