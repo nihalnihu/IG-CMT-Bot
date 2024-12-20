@@ -75,11 +75,11 @@ source setup.sh
 ```
 ### _Get Instagram Post ID (Must)_
 ```
-python get_post_id.py
+bash get_post_id.sh
 ```
 ### _Send Auto Unlimited Comments._ 😜
 ```
-python send_comment.py
+bash send_comment.sh
 ```
 </details>
 
@@ -116,11 +116,11 @@ source setup.sh
 
 ### _Get Instagram Post ID (Must)_
 ```
-python get_post_id.py
+bash get_post_id.sh
 ```
 ### _Send Auto Unlimited Comments._ 😜
 ```
-python send_comment.py
+bash send_comment.sh
 ```
 
 </details>
