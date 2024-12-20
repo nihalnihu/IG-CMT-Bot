@@ -75,11 +75,14 @@ source setup.sh
 ```
 ### _Get Instagram Post ID (Must)_
 ```
-bash get_post_id.sh
+chmod +x get_post_id.sh send_comment.sh
+```
+```
+./get_post_id.sh
 ```
 ### _Send Auto Unlimited Comments._ 😜
 ```
-bash send_comment.sh
+./send_comment.sh
 ```
 </details>
 
@@ -116,11 +119,14 @@ source setup.sh
 
 ### _Get Instagram Post ID (Must)_
 ```
-bash get_post_id.sh
+chmod +x get_post_id.sh send_comment.sh
+```
+```
+./get_post_id.sh
 ```
 ### _Send Auto Unlimited Comments._ 😜
 ```
-bash send_comment.sh
+./send_comment.sh
 ```
 
 </details>
