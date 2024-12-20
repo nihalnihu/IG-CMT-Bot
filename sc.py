@@ -1,6 +1,5 @@
 from instagrapi import Client
 import time
-from wcwidth import wcswidth
 from termcolor import colored
 import getpass
 from colorama import Fore, Style
