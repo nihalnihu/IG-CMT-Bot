@@ -1,5 +1,6 @@
 from instagrapi import Client
 import time
+from wcwidth import wcswidth
 from termcolor import colored
 import getpass
 from colorama import Fore, Style
@@ -137,12 +138,14 @@ time.sleep(0.5)
 
 def print_rounded_box(content):
     lines = content.split('\n')
-    max_length = max(len(line) for line in lines)
+    # Compute the max display width accounting for wide characters like emojis
+    max_length = max(wcswidth(line) for line in lines)
     top_border = '╭' + '─' * (max_length + 4) + '╮'
     bottom_border = '╰' + '─' * (max_length + 4) + '╯'
     print(f"{Fore.LIGHTYELLOW_EX}{top_border}")
     for line in lines:
-        padding = ' ' * (max_length - len(line))
+        line_width = wcswidth(line)
+        padding = ' ' * (max_length - line_width)
         print(f"│  {line}{padding}  │")
     print(f"{bottom_border}{Fore.RESET}")
 
