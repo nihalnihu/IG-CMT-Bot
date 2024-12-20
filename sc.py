@@ -109,7 +109,7 @@ while True:
 comments = []
 for i in range(1, comment_types + 1):
     while True:
-        comment = input(f"{Style.BRIGHT}{Fore.LIGHTBLUE_EX}Enter Comment Message {i}: {Fore.RESET}").strip()
+        comment = input(f"{Style.BRIGHT}{Fore.CYAN}Enter Comment Message {i}: {Fore.RESET}").strip()
         if comment:
             comments.append(comment)
             break
