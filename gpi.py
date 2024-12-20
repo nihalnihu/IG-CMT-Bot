@@ -81,4 +81,4 @@ except Exception as e:
     exit()
 time.sleep(0.5)
 print(f"\n{Fore.LIGHTYELLOW_EX}Post ID: {postID}\n\n{Fore.LIGHTGREEN_EX}{Style.BRIGHT}Copy{Fore.LIGHTWHITE_EX}{Style.BRIGHT} the Post ID, "
-      f"{Fore.LIGHTGREEN_EX}then run {Fore.LIGHTBLACK_EX}python send_comment.py\n")
+      f"{Fore.LIGHTGREEN_EX}then run {Fore.LIGHTBLACK_EX}bash send_comment.sh\n")
