@@ -84,7 +84,7 @@ except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error: {str(e)}")  
     sys.exit(1)
 
-print(f"\n{Fore.LIGHTWHITE_EX}Run {Fore.LIGHTBLACK_EX}'python get_post_id.py'{Fore.LIGHTWHITE_EX} if You Don't Have Target POST ID!")
+print(f"\n{Fore.LIGHTWHITE_EX}Run {Fore.LIGHTBLACK_EX}'bash get_post_id.sh'{Fore.LIGHTWHITE_EX} if You Don't Have Target POST ID!")
 
 while True:
     POSTID = input(f"\n{Fore.LIGHTCYAN_EX}Enter Instagram Post ID: {Fore.RESET}").strip()
@@ -96,20 +96,20 @@ while True:
             break 
         except Exception:
             print(f"{Style.BRIGHT}{Fore.RED}Invalid Post ID. Please enter a valid POST ID.")
-    time.sleep(0.5)
+    time.sleep(0.3)
 
 while True:
     try:
-        comment_types = int(input(f"\n{Style.BRIGHT}{Fore.LIGHTYELLOW_EX}How Many Types of Comments You Want to Set: {Fore.RESET}"))
+        comment_types = int(input(f"\n{Style.BRIGHT}{Fore.BLUE}How Many Types of Comments You Want to Set: {Fore.RESET}"))
         if comment_types > 0:
             break
     except ValueError:
-        print(f"{Style.BRIGHT}{Fore.RED}Invalid Input. Please enter a valid number of comment types.")
+        print(f"{Style.BRIGHT}{Fore.RED}Invalid Input. Please enter a valid number of comment types. (if you want to send 2 or more deferent Type commants)")
 
 comments = []
 for i in range(1, comment_types + 1):
     while True:
-        comment = input(f"{Style.BRIGHT}{Fore.LIGHTYELLOW_EX}Enter Comment Message {i}: {Fore.RESET}").strip()
+        comment = input(f"{Style.BRIGHT}{Fore.LIGHTBLUE_EX}Enter Comment Message {i}: {Fore.RESET}").strip()
         if comment:
             comments.append(comment)
             break
@@ -147,12 +147,15 @@ def print_rounded_box(content):
     print(f"{bottom_border}{Fore.RESET}")
 
 FIRST = """
-  ғʀᴏᴍ        : {}
-  ᴘᴏsᴛ ɪᴅ     : {}
+  ғʀᴏᴍ             : {}
+  ᴘᴏsᴛ ɪᴅ          : {}
   ᴛʏᴘᴇs ᴏғ ᴄᴏᴍᴍᴇɴᴛs: {}
-  ᴛᴏᴛᴀʟ       : {}
+  ᴄᴏᴍᴍᴇɴᴛ ᴍᴇssᴀɢᴇs : {}
+  ᴛᴏᴛᴀʟ            : {}
 """
-print_rounded_box(FIRST.format(username, POSTID, comment_types, cmtcount))
+
+print_rounded_box(FIRST.format(username, POSTID, comment_types, "\n  ".join(comments), cmtcount))
+
 
 i = 1
 while i <= cmtcount:
@@ -161,7 +164,7 @@ while i <= cmtcount:
         bot.media_comment(POSTID, commentmsg)
         remaining = cmtcount - i
         sys.stdout.write("\033[K")
-        print(f"\tRemaining: {remaining}  |  Success: {i} | Comment: {commentmsg}", end='\r', flush=True)
+        print(f"Remaining: {remaining}  |  Success: {i} | Comment: {commentmsg}", end='\r', flush=True)
         time.sleep(deley)
         i += 1
     except Exception as e:
