@@ -90,6 +90,6 @@ cat << "EOF"
 EOF
 
 echo -e "\n${GREEN}All Dependencies Have Been Installed Successfully!${NC}\n"
-
+chmod +x send_comment.sh get_post_id.sh
 # Final prompt to run get_post_id.py
-echo -e "${YELLOW}Now Run ${BRIGHT_BLACK}python get_post_id.py${YELLOW}${NC}\n"
+echo -e "${YELLOW}Now Run ${BRIGHT_BLACK}bash get_post_id.sh${YELLOW}${NC}\n"
