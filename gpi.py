@@ -53,7 +53,7 @@ def print_centered_box(text, box_length=None):
 print(colored(STR, 'light_cyan'))
 
 max_about_length = max(len(line) for line in ABOUT)  
-print_centered_box("IG CMT BOT-V2.1", max_about_length)
+print_centered_box("IG CMT BOT-V3.0", max_about_length)
 
 
 print_stylish_about_box(ABOUT)
