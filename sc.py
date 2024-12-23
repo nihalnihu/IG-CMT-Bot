@@ -172,5 +172,3 @@ while i <= cmtcount:
 
 print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Successfully Sent {i - 1} Comments\n")
 
-yt_url = "https://youtube.com/@terminalbots"
-subprocess.run(["termux-open-url", yt_url])
