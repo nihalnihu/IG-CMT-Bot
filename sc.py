@@ -189,7 +189,6 @@ def print_expensive_progress_box(remaining, success, commentmsg, delay_left):
     print(f"║ {Fore.LIGHTBLUE_EX}Current Comment: {Fore.LIGHTWHITE_EX}{commentmsg.ljust(box_width - 22)}{Fore.LIGHTYELLOW_EX}║")
     print(f"╚{horizontal_border}╝{Fore.RESET}", end='\r', flush=True)
 
-        time.sleep(deley)
         i += 1
     except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
