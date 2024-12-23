@@ -100,9 +100,9 @@ while True:
 
 while True:
     try:
-        comment_types_input = input(f"\n{Style.BRIGHT}{Fore.BLUE}How Many Types of Comments You Want to Set: {Fore.RESET}").strip()
+        comment_types_input = input(f"\n{Style.BRIGHT}{Fore.BLUE}How Many Type Comments You Want to Set (Press Enter to Skip): {Fore.RESET}").strip()
         if not comment_types_input:  # If input is empty
-            print(f"{Fore.LIGHTYELLOW_EX}No comment types specified. Reading from 'comments.txt'...{Fore.RESET}")
+            print(f"{Fore.LIGHTYELLOW_EX}Randomly Select Comments from 'comments.txt'...{Fore.RESET}")
             if not os.path.exists('comments.txt'):
                 print(f"{Style.BRIGHT}{Fore.RED}Error: 'comments.txt' file not found in the current directory!{Fore.RESET}")
                 sys.exit(1)
