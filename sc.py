@@ -161,11 +161,10 @@ def print_rounded_box(content):
 FIRST = """
   ғʀᴏᴍ             : {}
   ᴘᴏsᴛ ɪᴅ          : {}
-  ᴛʏᴘᴇs ᴏғ ᴄᴏᴍᴍᴇɴᴛs: {}
   ᴛᴏᴛᴀʟ            : {}
 """
 
-print_rounded_box(FIRST.format(username, POSTID, comment_types, cmtcount))
+print_rounded_box(FIRST.format(username, POSTID, cmtcount))
 
 
 i = 1
