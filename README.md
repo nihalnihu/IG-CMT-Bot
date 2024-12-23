@@ -74,9 +74,7 @@ chmod +x setup.sh
 source setup.sh
 ```
 ### _Get Instagram Post ID (Must)_
-```
-chmod +x get_post_id.sh send_comment.sh
-```
+
 ```
 ./get_post_id.sh
 ```
@@ -118,9 +116,6 @@ source setup.sh
 ```
 
 ### _Get Instagram Post ID (Must)_
-```
-chmod +x get_post_id.sh send_comment.sh
-```
 ```
 ./get_post_id.sh
 ```
