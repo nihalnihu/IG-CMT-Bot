@@ -84,7 +84,7 @@ except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error: {str(e)}")  
     sys.exit(1)
 
-print(f"\n{Fore.LIGHTWHITE_EX}Run {Fore.LIGHTBLACK_EX}'bash get_post_id.sh'{Fore.LIGHTWHITE_EX} if You Don't Have Target POST ID!")
+print(f"\n{Fore.YELLOW}!Run {Fore.LIGHTBLACK_EX}'./get_post_id.sh'{Fore.YELLOW} if You Don't Have Target POST ID!{Fore.RESET}")
 
 while True:
     POSTID = input(f"\n{Fore.LIGHTCYAN_EX}Enter Instagram Post ID: {Fore.RESET}").strip()
