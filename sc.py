@@ -135,6 +135,27 @@ while True:
 print(f"\n       If You Want To Stop?{Fore.LIGHTBLACK_EX} CTRL+C\n{Fore.RESET}")
 time.sleep(0.5)
 
+def print_rounded_box(content):
+    lines = content.split('\n')
+    max_length = max(len(line) for line in lines)
+    top_border = '╭' + '─' * (max_length + 4) + '╮'
+    bottom_border = '╰' + '─' * (max_length + 4) + '╯'
+    print(f"{Fore.LIGHTYELLOW_EX}{top_border}")
+    for line in lines:
+        padding = ' ' * (max_length - len(line))
+        print(f"│  {line}{padding}  │")
+    print(f"{bottom_border}{Fore.RESET}")
+
+FIRST = """
+  ғʀᴏᴍ             : {}
+  ᴘᴏsᴛ ɪᴅ          : {}
+  ᴛʏᴘᴇs ᴏғ ᴄᴏᴍᴍᴇɴᴛs: {}
+  ᴛᴏᴛᴀʟ            : {}
+"""
+
+print_rounded_box(FIRST.format(username, POSTID, comment_types, cmtcount))
+
+
 i = 1
 while i <= cmtcount:
     try:
@@ -142,7 +163,9 @@ while i <= cmtcount:
         bot.media_comment(POSTID, commentmsg)
         remaining = cmtcount - i
         sys.stdout.write("\033[K")
-def print_expensive_progress_box(remaining, success, commentmsg):
+        # print(f"  Remaining: {remaining}  |  Success: {i} | Comment: {commentmsg}", end='\r', flush=True)
+
+      def print_expensive_progress_box(remaining, success, commentmsg):
     # Set box dimensions and alignment
     box_width = max(len(commentmsg) + 20, 70)  # Ensure sufficient width
     horizontal_border = '━' * box_width
@@ -156,35 +179,15 @@ def print_expensive_progress_box(remaining, success, commentmsg):
     print(f"╟{horizontal_border}╢")
     print(f"║ {Fore.LIGHTBLUE_EX}Current Comment: {Fore.LIGHTWHITE_EX}{commentmsg.ljust(box_width - 22)}{Fore.LIGHTYELLOW_EX}║")
     print(f"╚{horizontal_border}╝{Fore.RESET}")
-  time.sleep(deley)
+
+        time.sleep(deley)
         i += 1
     except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
         break
 
+print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Successfully Sent {i - 1} Comments\n")
 
-i = 1
-while i <= cmtcount:
-    try:
-        commentmsg = random.choice(comments)  # Select a random comment
-        bot.media_comment(POSTID, commentmsg)  # Post the comment
-        remaining = cmtcount - i  # Update remaining comments
-
-        # Print the entire status box just once before starting the delay countdown
-        print_expensive_progress_box(remaining, i, commentmsg, deley)
-
-        # Countdown loop for delay, updating only the delay in the box
-        for delay_left in range(deley, 0, -1):  # Countdown loop for delay
-            print_expensive_progress_box(remaining, i, commentmsg, delay_left)  # Only update delay part
-            time.sleep(1)  # Wait for 1 second between updates
-
-        # After the delay countdown finishes, increment the comment counter
-        i += 1
-
-    except Exception as e:
-        print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
-        break
-
-
-print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Bot Exited After Sending {i - 1} Comments!{Fore.RESET}")
-subprocess.run(["start", "https://youtube.com/@TerminalBots"], shell=True)
+yt_url = "https://youtube.com/@terminalbots"
+subprocess.run(["termux-open-url", yt_url])
+  
