@@ -154,20 +154,38 @@ FIRST = """
 
 print_rounded_box(FIRST.format(username, POSTID, comment_types, cmtcount))
 
+def print_expensive_progress_box(remaining, success, comment):
+    lines = [
+        f"🌟 Remaining: {remaining}",
+        f"✅ Success  : {success}",
+        f"💬 Comment  : {comment}"
+    ]
+    max_length = max(len(line) for line in lines)
+    top_border = '╔' + '═' * (max_length + 6) + '╗'
+    middle_border = '╟' + '─' * (max_length + 6) + '╢'
+    bottom_border = '╚' + '═' * (max_length + 6) + '╝'
 
-i = 1
+    print(f"\033[K{Fore.LIGHTYELLOW_EX}{top_border}")  # Clear previous line and draw top border
+    for line in lines:
+        padding = ' ' * (max_length - len(line))
+        print(f"║   {line}{padding}   ║")  # Add spaces for padding on both sides
+    print(f"{middle_border}")
+    print(f"║ {Fore.LIGHTCYAN_EX}Keep up the good work!{Fore.LIGHTYELLOW_EX} ║")  # Extra encouragement line
+    print(f"{bottom_border}{Fore.RESET}")
+
+# Use the new box in the loop:
 while i <= cmtcount:
     try:
         commentmsg = random.choice(comments)
         bot.media_comment(POSTID, commentmsg)
         remaining = cmtcount - i
-        sys.stdout.write("\033[K")
-        print(f"  Remaining: {remaining}  |  Success: {i} | Comment: {commentmsg}", end='\r', flush=True)
+        print_expensive_progress_box(remaining, i, commentmsg)  # Call the new box function
         time.sleep(deley)
         i += 1
     except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
         break
+
 
 print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Successfully Sent {i - 1} Comments\n")
 
