@@ -5,11 +5,8 @@ YELLOW='\033[1;33m'
 BRIGHT_BLACK='\033[1;90m'
 NC='\033[0m' # No color
 
-# Function to create virtual environment and install packages
 setup_virtualenv() {
-  # Create a virtual environment if it doesn't exist
   if [ ! -d "ig-cmt-bot-env" ]; then
-    echo -e "\n${YELLOW}Creating a Python virtual environment...${NC}"
     python3 -m venv ig-cmt-bot-env
   else
     echo -e "\n${YELLOW}Virtual environment already exists. Activating...${NC}"
@@ -17,7 +14,6 @@ setup_virtualenv() {
 
 }
 
-# Function to install dependencies
 install_dependencies() {
   if command -v pkg &>/dev/null; then
     # Termux environment
@@ -58,13 +54,10 @@ install_dependencies() {
 clear
 install_dependencies
 
-# Setup virtual environment
 clear
 setup_virtualenv
-# Activate the virtual environment
 source ig-cmt-bot-env/bin/activate
 
-# Upgrade pip and install required packages
 echo -e "\n${YELLOW}Upgrading pip...${NC}"
 pip install --upgrade pip
 
@@ -74,7 +67,6 @@ pip install instagrapi==2.0.0
 pip install termcolor
 pip install colorama
 
-# Final clear and display success message with large text
 clear
 echo -e "${LIGHT_CYAN}"
 
@@ -90,6 +82,5 @@ cat << "EOF"
 EOF
 
 echo -e "\n${GREEN}All Dependencies Have Been Installed Successfully!${NC}\n"
-chmod +x send_comment.sh get_post_id.sh
-# Final prompt to run get_post_id.py
-echo -e "${YELLOW}Now Run ${BRIGHT_BLACK}bash get_post_id.sh${YELLOW}${NC}\n"
+chmod +x send_comment.sh get_post_id.sh update.sh
+echo -e "${YELLOW}Now Run ${BRIGHT_BLACK}./get_post_id.sh${YELLOW}${NC}\n"
