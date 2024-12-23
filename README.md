@@ -87,7 +87,7 @@ chmod +x get_post_id.sh send_comment.sh
 </details>
 
 <details>
- <summary>Linux</summary>
+ <summary>Kali Linux</summary>
 
 #### _For Update and upgrade Packeges_
 
