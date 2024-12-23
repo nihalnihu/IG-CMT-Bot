@@ -127,16 +127,10 @@ time.sleep(0.5)
 
 while True:
     try:
-        cmtcount = int(input(f"\n{Fore.YELLOW}Number of comments to send: {Fore.RESET}"))
-        while True:
-            delay = int(input(f"{Fore.WHITE}Delay between comments (seconds): {Fore.RESET}"))
-            if delay >= 30:
-                break  # Exit the inner loop if delay is valid
-            else:
-                print(f"{Fore.RED}Delay time must be at least 30 seconds. Please enter a valid delay time.{Fore.RESET}")
-        break  # Exit the outer loop if everything is valid
+        deley = int(input(f"\n{Fore.LIGHTWHITE_EX}{Style.BRIGHT}How Many Seconds to Delay: "))
+        break
     except ValueError:
-        print(f"{Fore.RED}Invalid input. Please enter valid numbers.{Fore.RESET}")
+        print(f"{Style.BRIGHT}{Fore.RED}Invalid Input, Please Enter A Valid Delay Time (In seconds).")
 
 print(f"\n       If You Want To Stop?{Fore.LIGHTBLACK_EX} CTRL+C\n{Fore.RESET}")
 time.sleep(0.5)
