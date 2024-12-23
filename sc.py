@@ -140,7 +140,10 @@ time.sleep(0.5)
 while True:
     try:
         deley = int(input(f"\n{Fore.LIGHTWHITE_EX}{Style.BRIGHT}How Many Seconds to Delay: "))
-        break
+        if not deley >= 30:
+            print(f"{Style.BRIGHT}{Fore.RED}⚠️ Instagram Alert: The minimum delay time is 30 seconds. Please follow the limits to protect your account! ⏳")
+        else:
+            break
     except ValueError:
         print(f"{Style.BRIGHT}{Fore.RED}Invalid Input, Please Enter A Valid Delay Time (In seconds).")
 
