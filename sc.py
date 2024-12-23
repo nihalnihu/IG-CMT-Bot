@@ -135,26 +135,20 @@ while True:
 print(f"\n       If You Want To Stop?{Fore.LIGHTBLACK_EX} CTRL+C\n{Fore.RESET}")
 time.sleep(0.5)
 
-def print_rounded_box(content):
-    lines = content.split('\n')
-    max_length = max(len(line) for line in lines)
-    top_border = '╭' + '─' * (max_length + 4) + '╮'
-    bottom_border = '╰' + '─' * (max_length + 4) + '╯'
-    print(f"{Fore.LIGHTYELLOW_EX}{top_border}")
-    for line in lines:
-        padding = ' ' * (max_length - len(line))
-        print(f"│  {line}{padding}  │")
-    print(f"{bottom_border}{Fore.RESET}")
+def print_expensive_progress_box(remaining, success, commentmsg, delay_left):
+    # Set box dimensions and alignment
+    box_width = max(len(commentmsg) + 20, 70)  # Ensure sufficient width
+    horizontal_border = '━' * box_width
+    top_padding = (box_width - 28) // 2  # Center "INSTAGRAM BOT STATUS"
 
-FIRST = """
-  ғʀᴏᴍ             : {}
-  ᴘᴏsᴛ ɪᴅ          : {}
-  ᴛʏᴘᴇs ᴏғ ᴄᴏᴍᴍᴇɴᴛs: {}
-  ᴛᴏᴛᴀʟ            : {}
-"""
+    print(f"\n{Fore.LIGHTYELLOW_EX}╔{horizontal_border}╗")
+    print(f"║{' ' * top_padding}{Fore.LIGHTWHITE_EX}INSTAGRAM BOT STATUS{Fore.LIGHTYELLOW_EX}{' ' * top_padding}║")
+    print(f"╟{horizontal_border}╢")
 
-print_rounded_box(FIRST.format(username, POSTID, comment_types, cmtcount))
-
+    print(f"║ {Fore.LIGHTBLUE_EX}Remaining: {Fore.LIGHTCYAN_EX}{remaining:<10}  {Fore.LIGHTBLUE_EX}| {Fore.LIGHTGREEN_EX}Success: {success:<10}  {Fore.LIGHTBLUE_EX}|  {Fore.RESET}{Fore.LIGHTMAGENTA_EX}Delay: {Fore.LIGHTWHITE_EX}{delay_left}s{' ' * 10} {Fore.LIGHTYELLOW_EX}║")
+    print(f"╟{horizontal_border}╢")
+    print(f"║ {Fore.LIGHTBLUE_EX}Current Comment: {Fore.LIGHTWHITE_EX}{commentmsg.ljust(box_width - 22)}{Fore.LIGHTYELLOW_EX}║")
+    print(f"╚{horizontal_border}╝{Fore.RESET}", end='\r', flush=True)
 
 i = 1
 while i <= cmtcount:
@@ -174,28 +168,5 @@ while i <= cmtcount:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
         break
 
-def print_expensive_progress_box(remaining, success, commentmsg, delay_left):
-    # Set box dimensions and alignment
-    box_width = max(len(commentmsg) + 20, 70)  # Ensure sufficient width
-    horizontal_border = '━' * box_width
-    top_padding = (box_width - 28) // 2  # Center "INSTAGRAM BOT STATUS"
-
-    print(f"\n{Fore.LIGHTYELLOW_EX}╔{horizontal_border}╗")
-    print(f"║{' ' * top_padding}{Fore.LIGHTWHITE_EX}INSTAGRAM BOT STATUS{Fore.LIGHTYELLOW_EX}{' ' * top_padding}║")
-    print(f"╟{horizontal_border}╢")
-
-    print(f"║ {Fore.LIGHTBLUE_EX}Remaining: {Fore.LIGHTCYAN_EX}{remaining:<10}  {Fore.LIGHTBLUE_EX}| {Fore.LIGHTGREEN_EX}Success: {success:<10}  {Fore.LIGHTBLUE_EX}|  {Fore.RESET}{Fore.LIGHTMAGENTA_EX}Delay: {Fore.LIGHTWHITE_EX}{delay_left}s{' ' * 10} {Fore.LIGHTYELLOW_EX}║")
-    print(f"╟{horizontal_border}╢")
-    print(f"║ {Fore.LIGHTBLUE_EX}Current Comment: {Fore.LIGHTWHITE_EX}{commentmsg.ljust(box_width - 22)}{Fore.LIGHTYELLOW_EX}║")
-    print(f"╚{horizontal_border}╝{Fore.RESET}", end='\r', flush=True)
-
-        i += 1
-    except Exception as e:
-        print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
-        break
-
-print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Successfully Sent {i - 1} Comments\n")
-
-yt_url = "https://youtube.com/@terminalbots"
-subprocess.run(["termux-open-url", yt_url])
-  
+print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Bot Exited After Sending {i - 1} Comments!{Fore.RESET}")
+subprocess.run(["start", "https://youtube.com/@TerminalBots"], shell=True)
