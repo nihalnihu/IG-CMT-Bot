@@ -1,6 +1,6 @@
 no="\033[1;33m"
 
-echo -e ${no}"\n\tPlease Subscribe My YouTube Channel"
+echo -e ${no}"\n   Please Subscribe My YouTube Channel: @terminalbots"
 sleep 3
 
 green="\033[1;32m"
@@ -11,7 +11,3 @@ echo -e ${white}
 sleep 2
 git pull origin IGBot
 echo -e ${prpl}"\nᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴛʜɪs ᴛᴏᴏʟ.\n       sᴜᴘᴘᴏʀᴛ ᴜs\n"
-
-
-yt_url="https://youtube.com/@terminalbots"
-termux-open-url "$yt_url"
