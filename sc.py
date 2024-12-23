@@ -133,7 +133,6 @@ while True:
         print(f"{Style.BRIGHT}{Fore.RED}Invalid Input, Please Enter A Valid Delay Time (In seconds).")
 
 print(f"\n       If You Want To Stop?{Fore.LIGHTBLACK_EX} CTRL+C\n{Fore.RESET}")
-time.sleep(0.5)
 
 def print_rounded_box(content):
     lines = content.split('\n')
