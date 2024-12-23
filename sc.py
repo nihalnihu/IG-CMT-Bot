@@ -141,19 +141,20 @@ def print_expensive_progress_box(remaining, success, commentmsg, delay_left):
     horizontal_border = '━' * box_width
     top_padding = (box_width - 28) // 2  # Center "INSTAGRAM BOT STATUS"
 
-    # Print the status bar header once
+    # Print the status bar header once (outside the loop)
     print(f"{Fore.LIGHTYELLOW_EX}╔{horizontal_border}╗")
     print(f"║{' ' * top_padding}{Fore.LIGHTWHITE_EX}INSTAGRAM BOT STATUS{Fore.LIGHTYELLOW_EX}{' ' * top_padding}║")
     print(f"╟{horizontal_border}╢")
 
-    # Print the status information and overwrite the delay countdown
-    print(f"║ {Fore.LIGHTBLUE_EX}Remaining: {Fore.LIGHTCYAN_EX}{remaining:<10}  {Fore.LIGHTBLUE_EX}| {Fore.LIGHTGREEN_EX}Success: {success:<10}  {Fore.LIGHTBLUE_EX}|  {Fore.RESET}{Fore.LIGHTMAGENTA_EX}Delay: {Fore.LIGHTWHITE_EX}{delay_left}s{' ' * 10} {Fore.LIGHTYELLOW_EX}║")
+    # Now we only update the delay line without reprinting everything
+    print(f"║ {Fore.LIGHTBLUE_EX}Remaining: {Fore.LIGHTCYAN_EX}{remaining:<10}  {Fore.LIGHTBLUE_EX}| {Fore.LIGHTGREEN_EX}Success: {success:<10}  {Fore.LIGHTBLUE_EX}|  {Fore.RESET}{Fore.LIGHTMAGENTA_EX}Delay: {Fore.LIGHTWHITE_EX}{delay_left}s{' ' * 10} {Fore.LIGHTYELLOW_EX}║", end='\r', flush=True)
+
+    # Print the comment message (this doesn't change, so it's outside the loop)
     print(f"╟{horizontal_border}╢")
     print(f"║ {Fore.LIGHTBLUE_EX}Current Comment: {Fore.LIGHTWHITE_EX}{commentmsg.ljust(box_width - 22)}{Fore.LIGHTYELLOW_EX}║")
-    print(f"╚{horizontal_border}╝{Fore.RESET}", end='\r', flush=True)
+    print(f"╚{horizontal_border}╝{Fore.RESET}", end='', flush=True)
 
 
-i = 1
 i = 1
 while i <= cmtcount:
     try:
@@ -161,21 +162,20 @@ while i <= cmtcount:
         bot.media_comment(POSTID, commentmsg)  # Post the comment
         remaining = cmtcount - i  # Update remaining comments
 
-        # Display the status bar and countdown for the delay
+        # Print the entire status box just once before starting the delay countdown
+        print_expensive_progress_box(remaining, i, commentmsg, deley)
+
+        # Countdown loop for delay, updating only the delay in the box
         for delay_left in range(deley, 0, -1):  # Countdown loop for delay
-            print_expensive_progress_box(remaining, i, commentmsg, delay_left)
+            print_expensive_progress_box(remaining, i, commentmsg, delay_left)  # Only update delay part
             time.sleep(1)  # Wait for 1 second between updates
 
         # After the delay countdown finishes, increment the comment counter
         i += 1
 
-        # Clear previous output (you could add a `clear_console()` here if you like)
-        # print("\033[F", end="") # This line can also move the cursor up one line to overwrite
     except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
         break
-
-
 
 
 print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Bot Exited After Sending {i - 1} Comments!{Fore.RESET}")
