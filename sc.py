@@ -100,21 +100,33 @@ while True:
 
 while True:
     try:
-        comment_types = int(input(f"\n{Style.BRIGHT}{Fore.BLUE}How Many Types of Comments You Want to Set: {Fore.RESET}"))
+        comment_types_input = input(f"\n{Style.BRIGHT}{Fore.BLUE}How Many Types of Comments You Want to Set: {Fore.RESET}").strip()
+        if not comment_types_input:  # If input is empty
+            print(f"{Fore.LIGHTYELLOW_EX}No comment types specified. Reading from 'comments.txt'...{Fore.RESET}")
+            if not os.path.exists('comments.txt'):
+                print(f"{Style.BRIGHT}{Fore.RED}Error: 'comments.txt' file not found in the current directory!{Fore.RESET}")
+                sys.exit(1)
+            with open('comments.txt', 'r', encoding='utf-8') as file:
+                comments = [line.strip() for line in file if line.strip()]
+            if not comments:
+                print(f"{Style.BRIGHT}{Fore.RED}Error: 'comments.txt' is empty! Please add comments to the file and try again.{Fore.RESET}")
+                sys.exit(1)
+            break
+
+        comment_types = int(comment_types_input)
         if comment_types > 0:
+            comments = []
+            for i in range(1, comment_types + 1):
+                while True:
+                    comment = input(f"\n{Style.BRIGHT}{Fore.CYAN}Enter Comment Message {i}: {Fore.RESET}").strip()
+                    if comment:
+                        comments.append(comment)
+                        break
+                    else:
+                        print(f"{Style.BRIGHT}{Fore.RED}You can't leave it empty. Please Enter a Comment Message.")
             break
     except ValueError:
-        print(f"{Style.BRIGHT}{Fore.RED}Invalid Input. Please enter a valid number of comment types. (if you want to send 2 or more deferent Type commants)")
-
-comments = []
-for i in range(1, comment_types + 1):
-    while True:
-        comment = input(f"\n{Style.BRIGHT}{Fore.CYAN}Enter Comment Message {i}: {Fore.RESET}").strip()
-        if comment:
-            comments.append(comment)
-            break
-        else:
-            print(f"{Style.BRIGHT}{Fore.RED}You can't leave it empty. Please Enter a Comment Message.")
+        print(f"{Style.BRIGHT}{Fore.RED}Invalid Input. Please enter a valid number of comment types.")
 
 while True:
     try:
