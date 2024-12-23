@@ -154,7 +154,8 @@ FIRST = """
 
 print_rounded_box(FIRST.format(username, POSTID, comment_types, cmtcount))
 
-def print_expensive_progress_box(remaining, success, comment):
+
+def print_expensive_progress_box(remaining, success, comment, overwrite=False):
     lines = [
         f"🌟 Remaining: {remaining}",
         f"✅ Success  : {success}",
@@ -165,26 +166,34 @@ def print_expensive_progress_box(remaining, success, comment):
     middle_border = '╟' + '─' * (max_length + 6) + '╢'
     bottom_border = '╚' + '═' * (max_length + 6) + '╝'
 
-    print(f"\033[K{Fore.LIGHTYELLOW_EX}{top_border}")  # Clear previous line and draw top border
+    if overwrite:
+        # Move the cursor up by the number of lines in the box + 3 for borders
+        print(f"\033[F" * (len(lines) + 4), end='')
+
+    print(f"{Fore.LIGHTYELLOW_EX}{top_border}")
     for line in lines:
         padding = ' ' * (max_length - len(line))
-        print(f"║   {line}{padding}   ║")  # Add spaces for padding on both sides
+        print(f"║   {line}{padding}   ║")
     print(f"{middle_border}")
-    print(f"║ {Fore.LIGHTCYAN_EX}Keep up the good work!{Fore.LIGHTYELLOW_EX} ║")  # Extra encouragement line
+    print(f"║ {Fore.LIGHTCYAN_EX}Keep up the good work!{Fore.LIGHTYELLOW_EX} ║")
     print(f"{bottom_border}{Fore.RESET}")
 
-# Use the new box in the loop:
+# Initial print of the box
+print_expensive_progress_box(cmtcount, 0, "Waiting to start...")
+
+# Use the new box in the loop and overwrite
 while i <= cmtcount:
     try:
         commentmsg = random.choice(comments)
         bot.media_comment(POSTID, commentmsg)
         remaining = cmtcount - i
-        print_expensive_progress_box(remaining, i, commentmsg)  # Call the new box function
+        print_expensive_progress_box(remaining, i, commentmsg, overwrite=True)  # Overwrite the previous box
         time.sleep(deley)
         i += 1
     except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
         break
+
 
 
 print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Successfully Sent {i - 1} Comments\n")
