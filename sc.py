@@ -141,14 +141,17 @@ def print_expensive_progress_box(remaining, success, commentmsg, delay_left):
     horizontal_border = '━' * box_width
     top_padding = (box_width - 28) // 2  # Center "INSTAGRAM BOT STATUS"
 
-    print(f"\n{Fore.LIGHTYELLOW_EX}╔{horizontal_border}╗")
+    # Clear previous output (this only works in some environments like terminal/console)
+    print(f"{Fore.LIGHTYELLOW_EX}╔{horizontal_border}╗")
     print(f"║{' ' * top_padding}{Fore.LIGHTWHITE_EX}INSTAGRAM BOT STATUS{Fore.LIGHTYELLOW_EX}{' ' * top_padding}║")
     print(f"╟{horizontal_border}╢")
-
+    
+    # Here, delay_left will update each time, overwriting the previous line.
     print(f"║ {Fore.LIGHTBLUE_EX}Remaining: {Fore.LIGHTCYAN_EX}{remaining:<10}  {Fore.LIGHTBLUE_EX}| {Fore.LIGHTGREEN_EX}Success: {success:<10}  {Fore.LIGHTBLUE_EX}|  {Fore.RESET}{Fore.LIGHTMAGENTA_EX}Delay: {Fore.LIGHTWHITE_EX}{delay_left}s{' ' * 10} {Fore.LIGHTYELLOW_EX}║")
     print(f"╟{horizontal_border}╢")
     print(f"║ {Fore.LIGHTBLUE_EX}Current Comment: {Fore.LIGHTWHITE_EX}{commentmsg.ljust(box_width - 22)}{Fore.LIGHTYELLOW_EX}║")
     print(f"╚{horizontal_border}╝{Fore.RESET}", end='\r', flush=True)
+
 
 i = 1
 while i <= cmtcount:
@@ -167,6 +170,7 @@ while i <= cmtcount:
     except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
         break
+
 
 
 print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Bot Exited After Sending {i - 1} Comments!{Fore.RESET}")
