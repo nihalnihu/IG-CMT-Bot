@@ -92,12 +92,12 @@ chmod +x get_post_id.sh send_comment.sh
 #### _For Update and upgrade Packeges_
 
 ```
-apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 ```
 ### _Install Git_
 
 ```
-apt install git -y
+sudo apt install git -y
 ```
 ### _Install and Open IG-CMT-Bot_
 
