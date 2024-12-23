@@ -153,20 +153,21 @@ def print_expensive_progress_box(remaining, success, commentmsg, delay_left):
 i = 1
 while i <= cmtcount:
     try:
-        commentmsg = random.choice(comments)
-        bot.media_comment(POSTID, commentmsg)
-        remaining = cmtcount - i
+        commentmsg = random.choice(comments)  # Select a random comment
+        bot.media_comment(POSTID, commentmsg)  # Post the comment
+        remaining = cmtcount - i  # Update remaining comments
         
-        # Display the initial progress box
+        # Display the status bar and countdown for the delay
         for delay_left in range(deley, 0, -1):  # Countdown loop for delay
             print_expensive_progress_box(remaining, i, commentmsg, delay_left)
             time.sleep(1)  # Wait for 1 second between updates
 
-        # After delay, increment success count
+        # After the delay countdown finishes, increment the comment counter
         i += 1
     except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
         break
+
 
 print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Bot Exited After Sending {i - 1} Comments!{Fore.RESET}")
 subprocess.run(["start", "https://youtube.com/@TerminalBots"], shell=True)
