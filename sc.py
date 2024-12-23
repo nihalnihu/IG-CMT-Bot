@@ -163,7 +163,23 @@ while i <= cmtcount:
         bot.media_comment(POSTID, commentmsg)
         remaining = cmtcount - i
         sys.stdout.write("\033[K")
-        print(f"  Remaining: {remaining}  |  Success: {i} | Comment: {commentmsg}", end='\r', flush=True)
+        # print(f"  Remaining: {remaining}  |  Success: {i} | Comment: {commentmsg}", end='\r', flush=True)
+
+      def print_expensive_progress_box(remaining, success, commentmsg):
+    # Set box dimensions and alignment
+    box_width = max(len(commentmsg) + 20, 70)  # Ensure sufficient width
+    horizontal_border = '━' * box_width
+    top_padding = (box_width - 28) // 2  # Center "INSTAGRAM BOT STATUS"
+
+    print(f"\n{Fore.LIGHTYELLOW_EX}╔{horizontal_border}╗")
+    print(f"║{' ' * top_padding}{Fore.LIGHTWHITE_EX}INSTAGRAM BOT STATUS{Fore.LIGHTYELLOW_EX}{' ' * top_padding}║")
+    print(f"╟{horizontal_border}╢")
+
+    print(f"║ {Fore.LIGHTBLUE_EX}Remaining: {Fore.LIGHTCYAN_EX}{remaining:<10}  {Fore.LIGHTBLUE_EX}| {Fore.LIGHTGREEN_EX}Success: {success:<10}  {Fore.LIGHTBLUE_EX}|  {Fore.RESET}{Fore.LIGHTMAGENTA_EX}Delay: {Fore.LIGHTWHITE_EX}{deley}s{' ' * 10} {Fore.LIGHTYELLOW_EX}║")
+    print(f"╟{horizontal_border}╢")
+    print(f"║ {Fore.LIGHTBLUE_EX}Current Comment: {Fore.LIGHTWHITE_EX}{commentmsg.ljust(box_width - 22)}{Fore.LIGHTYELLOW_EX}║")
+    print(f"╚{horizontal_border}╝{Fore.RESET}")
+
         time.sleep(deley)
         i += 1
     except Exception as e:
