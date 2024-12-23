@@ -141,12 +141,12 @@ def print_expensive_progress_box(remaining, success, commentmsg, delay_left):
     horizontal_border = '━' * box_width
     top_padding = (box_width - 28) // 2  # Center "INSTAGRAM BOT STATUS"
 
-    # Clear previous output (this only works in some environments like terminal/console)
+    # Print the status bar header once
     print(f"{Fore.LIGHTYELLOW_EX}╔{horizontal_border}╗")
     print(f"║{' ' * top_padding}{Fore.LIGHTWHITE_EX}INSTAGRAM BOT STATUS{Fore.LIGHTYELLOW_EX}{' ' * top_padding}║")
     print(f"╟{horizontal_border}╢")
-    
-    # Here, delay_left will update each time, overwriting the previous line.
+
+    # Print the status information and overwrite the delay countdown
     print(f"║ {Fore.LIGHTBLUE_EX}Remaining: {Fore.LIGHTCYAN_EX}{remaining:<10}  {Fore.LIGHTBLUE_EX}| {Fore.LIGHTGREEN_EX}Success: {success:<10}  {Fore.LIGHTBLUE_EX}|  {Fore.RESET}{Fore.LIGHTMAGENTA_EX}Delay: {Fore.LIGHTWHITE_EX}{delay_left}s{' ' * 10} {Fore.LIGHTYELLOW_EX}║")
     print(f"╟{horizontal_border}╢")
     print(f"║ {Fore.LIGHTBLUE_EX}Current Comment: {Fore.LIGHTWHITE_EX}{commentmsg.ljust(box_width - 22)}{Fore.LIGHTYELLOW_EX}║")
@@ -154,12 +154,13 @@ def print_expensive_progress_box(remaining, success, commentmsg, delay_left):
 
 
 i = 1
+i = 1
 while i <= cmtcount:
     try:
         commentmsg = random.choice(comments)  # Select a random comment
         bot.media_comment(POSTID, commentmsg)  # Post the comment
         remaining = cmtcount - i  # Update remaining comments
-        
+
         # Display the status bar and countdown for the delay
         for delay_left in range(deley, 0, -1):  # Countdown loop for delay
             print_expensive_progress_box(remaining, i, commentmsg, delay_left)
@@ -167,9 +168,13 @@ while i <= cmtcount:
 
         # After the delay countdown finishes, increment the comment counter
         i += 1
+
+        # Clear previous output (you could add a `clear_console()` here if you like)
+        # print("\033[F", end="") # This line can also move the cursor up one line to overwrite
     except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
         break
+
 
 
 
