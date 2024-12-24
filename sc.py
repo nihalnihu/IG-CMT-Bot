@@ -169,6 +169,7 @@ FIRST = """
 
 print_rounded_box(FIRST.format(username, POSTID, cmtcount))
 
+
 i = 1
 while i <= cmtcount:
     try:
@@ -176,10 +177,7 @@ while i <= cmtcount:
         bot.media_comment(POSTID, commentmsg)
         remaining = cmtcount - i
         sys.stdout.write("\033[K")
-        sys.stdout.write("\033[K")
-        print(f"  Remaining: {remaining}  |  Success: {i}", end='\r', flush=True)
-        print(f"  Comment: {commentmsg}", end='\r', flush=True)
-
+        print(f"  Remaining: {remaining}  |  Success: {i} | Comment: {commentmsg}", end='\r', flush=True)
         time.sleep(deley)
         i += 1
     except Exception as e:
