@@ -176,7 +176,7 @@ while i <= cmtcount:
         bot.media_comment(POSTID, commentmsg)
         remaining = cmtcount - i
         sys.stdout.write("\033[K")
-        print(f"  Remaining: {remaining}  |  Success: {i}\nComment: {commentmsg}", end='\r', flush=True)
+        print(f"\tRemaining: {remaining}  |  Success: {i}\n\tComment: {commentmsg}", end='\r', flush=True)
         time.sleep(deley)
         i += 1
     except Exception as e:
