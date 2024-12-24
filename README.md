@@ -67,11 +67,9 @@ cd IG-CMT-Bot
 ```
 ### _Install Required Packeges & Libraries (it will take 5-10 minutes)_
 ```only for first time```
+
 ```
-chmod +x setup.sh
-```
-```
-source setup.sh
+bash setup.sh
 ```
 ### _Get Instagram Post ID (Must)_
 
@@ -109,10 +107,7 @@ cd IG-CMT-Bot
 ### _Install Required Packeges & Libraries (it will take 5-10 minutes)_
 ```Only for First Time```
 ```
-chmod +x setup.sh
-```
-```
-source setup.sh
+bash setup.sh
 ```
 
 ### _Get Instagram Post ID (Must)_
