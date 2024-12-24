@@ -150,6 +150,7 @@ while True:
 print(f"\n       If You Want To Stop?{Fore.LIGHTBLACK_EX} CTRL+C\n{Fore.RESET}")
 time.sleep(0.5)
 
+
 def print_rounded_box(content):
     lines = content.split('\n')
     max_length = max(len(line) for line in lines)
@@ -177,10 +178,10 @@ while i <= cmtcount:
         bot.media_comment(POSTID, commentmsg)
         remaining = cmtcount - i
 
-        # Clear the previous output
-        sys.stdout.write("\033[F" * (cmtcount + 5))  # Adjust lines to clear based on content height
+        # Clear previous output and move to the next line
+        sys.stdout.write("\033[F\033[K")  # Move up one line and clear
 
-        # Dynamically update rounded box
+        # Dynamically update rounded box with Remaining, Success, and Comment on a new line
         BOX_CONTENT = f"""
   Remaining: {remaining}
   Success: {i}
@@ -197,6 +198,6 @@ while i <= cmtcount:
         print(f"\nError while sending comment: {str(e)}")
         break
 
-# Print final summary
+# Print final summary in a new rounded box
 FINAL = f"Successfully Sent {i - 1} Comments"
 print_rounded_box(FINAL)
