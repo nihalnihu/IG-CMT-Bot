@@ -177,9 +177,11 @@ while i <= cmtcount:
         remaining = cmtcount - i
         sys.stdout.write("\033[K")  # Clear the current line
         print(f"  Remaining: {remaining}  |  Success: {i}\n  Comment: {commentmsg}", end='\r', flush=True)
-      if remaining>0:
-        time.sleep(deley)
-        i += 1
+        
+        if remaining > 0:
+            time.sleep(deley)
+        
+        i += 1  # Ensure i is incremented in every iteration after a successful comment.
         
     except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
