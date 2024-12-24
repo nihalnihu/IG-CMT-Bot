@@ -91,8 +91,11 @@ while True:
     if not POSTID.isdigit():
         print(f"{Style.BRIGHT}{Fore.RED}Invalid Post ID. Please enter a valid POST ID.")
     else:
+        print('Checking...')
         try:
             bot.media_info(POSTID)
+            sys.stdout.write("\033[K")
+            print('Done')
             break 
         except Exception:
             print(f"{Style.BRIGHT}{Fore.RED}Invalid Post ID. Please enter a valid POST ID.")
