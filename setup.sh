@@ -80,7 +80,5 @@ cat << "EOF"
 ╚══╩═══╝  ╚═══╩╝╚╝╚╝ ╚╝   ╚═══╩═══╝ ╚╝ 🅅3.0
 
 EOF
-
-printf "\n${GREEN}All Dependencies Have Been Installed Successfully!${NC}\n"
 chmod +x send_comment.sh get_post_id.sh update.sh
 printf "${YELLOW}Now Run ${BRIGHT_BLACK}./get_post_id.sh${YELLOW}${NC}\n"
