@@ -150,7 +150,6 @@ while True:
 print(f"\n       If You Want To Stop?{Fore.LIGHTBLACK_EX} CTRL+C\n{Fore.RESET}")
 time.sleep(0.5)
 
-
 def print_rounded_box(content):
     lines = content.split('\n')
     max_length = max(len(line) for line in lines)
@@ -162,42 +161,26 @@ def print_rounded_box(content):
         print(f"│  {line}{padding}  │")
     print(f"{bottom_border}{Fore.RESET}")
 
-# Initial box
-FIRST = f"""
-  ғʀᴏᴍ             : {username}
-  ᴘᴏsᴛ ɪᴅ          : {POSTID}
-  ᴛᴏᴛᴀʟ            : {cmtcount}
+FIRST = """
+  ғʀᴏᴍ             : {}
+  ᴘᴏsᴛ ɪᴅ          : {}
+  ᴛᴏᴛᴀʟ            : {}
 """
-print_rounded_box(FIRST)
 
-# Loop to send comments
+print_rounded_box(FIRST.format(username, POSTID, cmtcount))
+
 i = 1
 while i <= cmtcount:
     try:
         commentmsg = random.choice(comments)
         bot.media_comment(POSTID, commentmsg)
         remaining = cmtcount - i
-
-        # Clear previous output and move to the next line
-        sys.stdout.write("\033[F\033[K")  # Move up one line and clear
-
-        # Dynamically update rounded box with Remaining, Success, and Comment on a new line
-        BOX_CONTENT = f"""
-  Remaining: {remaining}
-  Success: {i}
-  Comment: {commentmsg}
-"""
-        print_rounded_box(BOX_CONTENT)
-
-        if remaining > 0:
-            time.sleep(deley)
-
-        i += 1  # Increment the counter
-
+        sys.stdout.write("\033[K")
+        print(f"  Remaining: {remaining}  |  Success: {i}\nComment: {commentmsg}", end='\r', flush=True)
+        time.sleep(deley)
+        i += 1
     except Exception as e:
-        print(f"\nError while sending comment: {str(e)}")
+        print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
         break
 
-# Print final summary in a new rounded box
-FINAL = f"Successfully Sent {i - 1} Comments"
-print_rounded_box(FINAL)
+print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Successfully Sent {i - 1} Comments\n")
