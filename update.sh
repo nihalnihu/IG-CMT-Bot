@@ -43,7 +43,7 @@ update_repository() {
 
 # Function to display a thank you message
 display_thank_you_message() {
-    printf "%b\nᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴛʜɪs ᴛᴏᴏʟ.\n  sᴜᴘᴘᴏʀᴛ ᴜs YT: @terminalbots\n%b\n" "$prpl" "$white"
+    printf "%b\nᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴛʜɪs ᴛᴏᴏʟ.\nsᴜᴘᴘᴏʀᴛ ᴜs YT: @terminalbots\n%b\n" "$prpl" "$white"
 }
 
 # Main function
