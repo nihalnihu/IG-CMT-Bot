@@ -175,13 +175,13 @@ while i <= cmtcount:
         commentmsg = random.choice(comments)
         bot.media_comment(POSTID, commentmsg)
         remaining = cmtcount - i
-        sys.stdout.write("\033[K")
-        print(f"\tRemaining: {remaining}  |  Success: {i}", end='\r', flush=True)
-        print(f'\tComment: {commentmsg}', end='\r', flush=True)
+        sys.stdout.write("\033[K")  # Clear the current line
+        print(f"\tRemaining: {remaining}  |  Success: {i}\n\tComment: {commentmsg}", end='\r', flush=True)
         time.sleep(deley)
         i += 1
     except Exception as e:
         print(f"\n{Style.BRIGHT}{Fore.RED}Error while sending comment: {str(e)}")
         break
+
 
 print(f"\n\n\n   {Fore.LIGHTGREEN_EX}{Style.BRIGHT}Successfully Sent {i - 1} Comments\n")
