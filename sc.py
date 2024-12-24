@@ -179,7 +179,7 @@ while i <= cmtcount:
         # Clear the previous output and overwrite
         sys.stdout.write("\033[F\033[K")  # Move up and clear the line
         sys.stdout.write("\033[F\033[K")  # Move up and clear the line again
-        print(f"  Remaining: {remaining}  |  Success: {i}")
+        print(f"\n  Remaining: {remaining}  |  Success: {i}")
         print(f"  Comment: {commentmsg}", flush=True)
         
         if remaining > 0:
