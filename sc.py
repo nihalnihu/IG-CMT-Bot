@@ -177,7 +177,7 @@ while i <= cmtcount:
         remaining = cmtcount - i
         sys.stdout.write("\033[K")
         print(f"\tRemaining: {remaining}  |  Success: {i}", end='\r', flush=True)
-        print('\tComment: {commentmsg}')
+        print(f'\tComment: {commentmsg}', end='\r', flush=True)
         time.sleep(deley)
         i += 1
     except Exception as e:
