@@ -6,11 +6,6 @@ green="\033[1;32m"
 white="\033[0m"
 prpl="\033[0;36m"
 
-# Function to display a subscription message
-display_subscription_message() {
-    printf "%b\n   Please Subscribe My YouTube Channel: @terminalbots%b\n" "$no" "$white"
-    sleep 3
-}
 
 # Function to display update progress
 update_progress() {
@@ -48,7 +43,7 @@ update_repository() {
 
 # Function to display a thank you message
 display_thank_you_message() {
-    printf "%b\nᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴛʜɪs ᴛᴏᴏʟ.\n       sᴜᴘᴘᴏʀᴛ ᴜs\n%b\n" "$prpl" "$white"
+    printf "%b\nᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴛʜɪs ᴛᴏᴏʟ.\n  sᴜᴘᴘᴏʀᴛ ᴜs YT: @terminalbots\n%b\n" "$prpl" "$white"
 }
 
 # Main function
@@ -58,7 +53,6 @@ main() {
         exit 1
     fi
     display_thank_you_message
-    display_subscription_message
 }
 
 # Execute main function
