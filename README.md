@@ -27,7 +27,7 @@ IＮＳＴＡＧＲＡＭ</p>
 
  <div align="center">
   
-[![Tutorial](https://img.shields.io/badge/Tutorial_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Wz8zQseGZR8?si=zzFZeP9oImn7vT0N)
+[![Tutorial](https://img.shields.io/badge/Tutorial_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Wz8zQseGZR8?si=lVknxaBuJPCQsYZW)
  </div>
  
 <details>
@@ -151,8 +151,11 @@ chmod +x update.sh
  ```
  nano comments.txt
  ```
-!Edit the comments as One Comment Per Line. use UP and DOWN Arrow!
+⚠️ Edit the comments as One Comment Per Line. use UP and DOWN Arrow!
 After Edits Save the File Using CTRL + X, Y, and ENTER
+
+[![Tutorial](https://img.shields.io/badge/Tutorial_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Wz8zQseGZR8?si=lVknxaBuJPCQsYZW)
+
  </details>
 
 <details>
