@@ -21,19 +21,25 @@ setup_virtualenv() {
 install_dependencies() {
   if command -v pkg &>/dev/null; then
     printf "\n${YELLOW}Installing dependencies in Termux...${NC}\n"
+    pkg update && pkg upgrade -y
     pkg install python libjpeg-turbo -y
+    pkg install nano
   elif command -v apt &>/dev/null; then
-    printf "\n${YELLOW}Installing dependencies on Debian/Ubuntu...${NC}\n"
+    printf "\n${YELLOW}Installing dependencies on  Kali/Debian/Ubuntu...${NC}\n"
     sudo apt update
+    sudo apt install nano
     sudo apt install python3 python3-pip libjpeg-dev python3-venv -y
   elif command -v dnf &>/dev/null; then
     printf "\n${YELLOW}Installing dependencies on Fedora...${NC}\n"
+    sudo dnf install nano
     sudo dnf install python3 python3-pip libjpeg-turbo-devel -y
   elif command -v pacman &>/dev/null; then
     printf "\n${YELLOW}Installing dependencies on Arch Linux...${NC}\n"
+    sudo pacman -Syu nano
     sudo pacman -Syu python python-pip libjpeg-turbo --noconfirm
   elif command -v zypper &>/dev/null; then
     printf "\n${YELLOW}Installing dependencies on OpenSUSE...${NC}\n"
+    sudo zypper install nano
     sudo zypper install python3 python3-pip libjpeg8-devel
   else
     printf "\n${YELLOW}Unsupported environment. Please install dependencies manually.${NC}\n"
