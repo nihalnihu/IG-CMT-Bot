@@ -144,6 +144,17 @@ chmod +x update.sh
 </details>
 
 <details>
+ <summary>Edit Bulk Comment Messages</summary>
+ ```in the Same Directory```
+ 
+ ```
+ nano comments.txt
+ ```
+!Edit the comments as One Comment Per Line. use UP and DOWN Arrow!
+After Edits Save the File Using CTRL + X, Y, and ENTER
+ </details>
+
+<details>
  <summary>sᴀᴍᴘʟᴇ</summary>
 
 # Get Post ID...
