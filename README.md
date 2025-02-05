@@ -1,5 +1,5 @@
 
-<p align="center"> <img src="https://github.com/nihalnihu/AutoIG-CMT/assets/72502160/5f6c0b5a-fbf1-4afa-88df-9386751ca607" alt="hi" width="100" height="100"></p>
+<p align="center"> <img src="https://raw.githubusercontent.com/nihalnihu/IG-CMT-Bot/refs/heads/IGBot/Images/1738777254569.png" alt="hi" width="100" height="150"></p>
 
 <p align="center">
 ＡＵＴＯ</p>
